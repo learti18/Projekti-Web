@@ -584,18 +584,22 @@ nav{
 }
 .rating{
     position: absolute;
-    top: 203px;
-    left: 170px;
+    top: 410px;
+    left: 340px;
     font-size: 12px;
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: white;
     border-radius: 20px;
-    justify-content: space-between;
     width: 38px;
     height: 20px;
     padding-left: 5px;
+}
+.rating p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .arrow-slider{
     column-gap: 2em;
