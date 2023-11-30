@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (ngjarja) {
     const BtnSubmit = document.getElementById('submit-btn');
+    let invalidEmail = document.getElementById('invalid-email');
+    let invalidPass = document.getElementById('invalid-pass');
 
     /*Funksioni per te e validuar fushat e formes */
     const emailValid = (email) => {
@@ -12,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
         const fjalkalimi = document.getElementById('pass');
         const emailin = document.getElementById('email');
 
-        if (fjalkalimi.value === "") {
-            alert("Ju lutem shtoni Fjalkalimin.");
+        if (fjalkalimi.value === "" || fjalkalimi.value.length < 7) {
+            invalidPass.textContent = "Invalid password!"
             fjalkalimi.focus();
             return false;
         }
@@ -25,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
         }
 
         if (!emailValid(emailin.value)) {
-            alert("Ju lutem te shtoni email'in valid.");
+            invalidEmail.textContent = "Invalid email!.";
             emailin.focus();
             return false;
         }
