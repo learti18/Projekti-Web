@@ -285,6 +285,7 @@ padding: 0;
 .price{
     display: flex;
     flex-direction: row;
+    gap: 2em;
 }
 .book{
     display: inline-flex;

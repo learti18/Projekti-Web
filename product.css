@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    background: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    
+}
+nav ul li{
+    list-style: none;
+    padding: 10px;
+}
+nav ul li a{
+    color: var(--Gray-1, #333);
+    text-decoration: none;
+}
+.logo{
+    text-decoration: none;
+    color: #1B1F2D;
+    font-size: 30px;
+}
+section{
+    background-color: #F4F4F4;
+}
+.grid-picture1{
+    grid-area:firstpic;
+}
+.grid-picture2{
+    grid-area:secondpic;
+}
+.grid-picture3{
+    grid-area:thirdpic;
+}
+.product-images{
+
+
+    display: grid;
+    grid-template-areas: "firstpic secondpic"
+                            "firstpic thirdpic";
+                              
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.product-section{
+    background-color: #FFFF;
+    width:100%;
+    background: linear-gradient(180deg, rgba(244, 244, 244, 0.00) 0%, #FFF 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 0;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    padding: 50px 150px;
+    column-gap: 30px;
+}
+.product-description{
+    display: flex;
+    flex-direction: column;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+}
+.location-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+.rating span{
+    padding-left: 10px;
+    color: var(--Gray-2, #4F4F4F);
+}
+.overview-section{
+    
+    font-size: 15px;
+    background-color: #FFF;
+    border-radius: 6px;
+}
+.facilities{
+    padding: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #E0E0E0;
+}
+.overview-text p{
+    padding: 15px 0;
+}
+.overview-text{
+    padding: 30px;
+}
+.packages{
+    display: flex;
+    flex-direction: row;
+    column-gap: 90px;
+}
+.packages-child{
+    padding-top: 20px;
+}
+.packages-child p{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+.footer-links{
+    background-color:#F4F4F4;
+    padding: 50px 40px 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-links ul{
+    display: flex;
+    flex-direction: row;
+}
+.footer-links ul li{
+    list-style: none;
+}
+.footer-links ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+}
+.footer-links p{
+    color: var(--Black-75, rgba(0, 0, 0, 0.50));
+}
+   
