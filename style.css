@@ -345,7 +345,6 @@ nav{
     background: var(--Blue-primary, #3E86F5);
     border: none;
     color: var(--White-primary, #FFF);
-    font-family: Poppins;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -354,6 +353,8 @@ nav{
     align-self: flex-start;
     padding: 15px 30px; 
     display: inline-block;
+    cursor: pointer;
+
 }
 .Contact-info{
     display: flex;
