@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    <h1 class="logo"><a href="#">Treloo</a></h1>
+    <h1 class="logo"><a href="travelingWeb.html">Treloo</a></h1>
     <div class="container">
         <form action="">
             <div>

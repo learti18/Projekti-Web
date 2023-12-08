@@ -14,9 +14,9 @@
         <div class="nav-links">
             <ul>
                 <li><a href="travelingWeb.html">HOME</a></li>
-                <li><a href="">BLOG</a></li>
-                <li><a href="Accommodation.html">Accommodation</a></li>
+                <li><a href="Accommodation.html">DESTINATIONS</a></li>
                 <li><a href="login.html">SIGN IN</a></li>
+                <li><a href="register.html">REGISTER</a></li>
             </ul>
         </div>
     </nav>
@@ -129,7 +129,7 @@
     
                     </div>
                     <div class="booking">
-                        <div><button class="book">BOOK</button></div>
+                        <div><a class="book" href="product.html">BOOK</a></div>
                         <div class="price">
                                 <div>
                                     <span id="price1">$150</span>
@@ -186,7 +186,7 @@
     
                     </div>
                     <div class="booking">
-                        <div><button class="book">BOOK</button></div>
+                        <div><a class="book" href="product.html">BOOK</a></div>
                         <div class="price">
                                 <div>
                                     <span id="price1">$150</span>
@@ -242,7 +242,7 @@
     
                     </div>
                     <div class="booking">
-                        <div><button class="book">BOOK</button></div>
+                        <div><a class="book" href="product.html">BOOK</a></div>
                         <div class="price">
                                 <div>
                                     <span id="price1">$150</span>
@@ -300,7 +300,7 @@
     
                     </div>
                     <div class="booking">
-                        <div><button class="book">BOOK</button></div>
+                        <div><a class="book" href="product.html">BOOK</a></div>
                         <div class="price">
                                 <div>
                                     <span id="price1">$150</span>
@@ -357,7 +357,7 @@
     
                     </div>
                     <div class="booking">
-                        <div><button class="book">BOOK</button></div>
+                        <div><a class="book" href="product.html">BOOK</a></div>
                         <div class="price">
                                 <div>
                                     <span id="price1">$150</span>
@@ -414,7 +414,7 @@
     
                     </div>
                     <div class="booking">
-                        <div><button class="book">BOOK</button></div>
+                        <div><a class="book" href="product.html">BOOK</a></div>
                         <div class="price">
                                 <div>
                                     <span id="price1">$150</span>
@@ -472,7 +472,7 @@
     
                     </div>
                     <div class="booking">
-                        <div><button class="book">BOOK</button></div>
+                        <div><a class="book" href="product.html">BOOK</a></div>
                         <div class="price">
                                 <div>
                                     <span id="price1">$150</span>

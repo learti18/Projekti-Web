@@ -15,9 +15,9 @@
             <div class="nav-links">
                 <ul>
                     <li><a href="travelingWeb.html">HOME</a></li>
-                    <li><a href="">BLOG</a></li>
-                    <li><a href="Accommodation.html">Accommodation</a></li>
+                    <li><a href="Accommodation.html">DESTINATIONS</a></li>
                     <li><a href="login.html">SIGN IN</a></li>
+                    <li><a href="register.html">REGISTER</a></li>
                 </ul>
             </div>
         </nav>
@@ -93,7 +93,7 @@
                         <h3 class="destination-title1">Loga Sea</h3>
                         <div class="book-section">
                             <p><span class="price">700$</span>/Person</p>
-                            <button class="buttons">Book Now</button>
+                            <a href="product.html" class="buttons">Book Now</a>
                         </div>
                     </div>
                     <div class="card">
@@ -105,7 +105,7 @@
                         <h3 class="destination-title1">Ansgar Scheffold</h3>
                         <div class="book-section">
                             <p><span class="price">400$</span>/Person</p>
-                            <button class="buttons">Book Now</button>
+                            <a href="product.html" class="buttons">Book Now</a>
                         </div>
                     </div>
                     <div class="card">
@@ -117,7 +117,7 @@
                         <h3 class="destination-title1">Lona X</h3>
                         <div class="book-section">
                             <p><span class="price">340$</span>/Person</p>
-                            <button type="button" class="buttons">Book Now</button>
+                            <a href="product.html" class="buttons">Book Now</a>
                         </div>
                     </div>
                 </div>            
@@ -167,22 +167,22 @@
             </div>
 
             <div class="destination-img">
-            <div class="card-destination">
+            <a class="card-destination" href="product.html">
                 <span class="photos-destination"><img src="photos/destination1.svg" >Kina Mountain</span>
                 <span class="photos-destination2"> <img src="photos/Location.svg" >Combodia</span>
-            </div>
-            <div class="card-destination">
+            </a>
+            <a class="card-destination" href="product.html">
                 <span class="photos-destination"><img src="photos/destination2.svg" >Kina Mountain</span>
                 <span class="photos-destination2"><img src="photos/Location.svg" >Combodia</span>
-            </div>
-            <div class="card-destination">
+            </a>
+            <a class="card-destination" href="product.html">
                 <span class="photos-destination"><img src="photos/destination3.svg" >Kina Mountain </span>
                 <span class="photos-destination2"><img src="photos/Location.svg" >Combodia</span>
-            </div>
-            <div class="card-destination">
+            </a>
+            <a class="card-destination" href="product.html">
                 <span class="photos-destination"><img src="photos/destination4.svg" >Kina Mountain </span>
                 <span class="photos-destination2"><img src="photos/Location.svg" >Combodia</span>
-            </div>
+            </a>
             </div>
 
 
@@ -230,14 +230,14 @@
         <div class="footer-section">
             <div class="discount-section">
                 <h1>Don’t Miss The 50% Discount if You register Today</h1>
-                <button class="register-button">Register Today</button>
+                <a class="register-button" href="register.html">Register Today</a>
             </div>
             <div class="footer-links">
                 <p>© 2022 Treloo LLC - All right reserved.</p>
                 <ul>
                     <li><a href="">Review</a></li>
                     <li><a href="">Tips</a></li>
-                    <li><a href="Accommodation.html">Accommodation</a></li>
+                    <li><a href="Accommodation.html">Destinations</a></li>
                     <li><a href="">Blog</a></li>
                 </ul>
             </div>

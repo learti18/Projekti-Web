@@ -13,9 +13,9 @@
             <h1><a href="travelingWeb.html" class="logo">Treloo</a></h1>
             <ul>
                 <li><a href="travelingWeb.html">HOME</a></li>
-                <li><a href="">REVIEW</a></li>
-                <lI><a href="">BLOG</a></lI>
+                <li><a href="Accommodation.html">DESTINATIONS</a></li>
                 <li><a href="login.html">SIGN IN</a></li>
+                <li><a href="register.html">REGISTER</a></li>
             </ul>
         </nav>
         <section>
