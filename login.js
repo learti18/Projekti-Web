@@ -24,6 +24,11 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
             fjalkalimi.focus();
             return false;
         }
+        if(emailin.value === ""){
+            invalidPass.textContent = "Invalid Email!"
+            fjalkalimi.focus();
+            return false;
+        }
 
         if (!emailValid(emailin.value) || emailin.value === "") {
             invalidEmail.textContent = "Invalid email!.";
