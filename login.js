@@ -19,17 +19,17 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
         invalidPass.textContent = "";
         invalidEmail.textContent = "";
 
+        if(emailin.value === ""){
+            invalidEmail.textContent = "Invalid Email!"
+            fjalkalimi.focus();
+            return false;
+        }
+
         if (fjalkalimi.value === "" || fjalkalimi.value.length < 7) {
             invalidPass.textContent = "Invalid password!"
             fjalkalimi.focus();
             return false;
         }
-        if(emailin.value === ""){
-            invalidPass.textContent = "Invalid Email!"
-            fjalkalimi.focus();
-            return false;
-        }
-
         if (!emailValid(emailin.value) || emailin.value === "") {
             invalidEmail.textContent = "Invalid email!.";
             emailin.focus();
