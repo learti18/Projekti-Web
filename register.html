@@ -9,16 +9,17 @@
 </head>
 <body>
     
-    <h1 class="logo"><a href="travelingWeb.html">Treloo</a></h1>
+    <h1 class="logo"><a href="travelingWeb.php">Treloo</a></h1>
     <div class="container">
         <form action="">
             <h1>Register</h1>
             <div class="input-box">
                 <label>Email address</label>
-                <input class="input" type="text" required>
+                <input class="input" type="text" id="email" required>
+                <p id="invalid-email" class="invalid-input"></p>
             </div>
             <div class="btn">
-                <button type="submit">Continue with email</button>
+                <button type="submit" id="submit-btn">Continue with email</button>
             </div>
             <div class="options"><span>or use one of these options</span></div>
             <div class="btns">
@@ -34,5 +35,6 @@
             </div>
         </form>
     </div>
+    <script src="register.js"></script>
 </body>
 </html>

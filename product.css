@@ -20,12 +20,13 @@ nav ul li{
     list-style: none;
 }
 nav ul li a{
+    border-radius:10px;
     padding: 12px 22px;
     color:#FFF;
     text-decoration: none;
 }
 nav ul li a:hover{
-    border-radius:10px;
+    
     background-color:#FFF;
     color: #3E86F5;
     transition: 0.5s;

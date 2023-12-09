@@ -35,6 +35,7 @@ section{
     align-items: center;
     height: 80%;
 }
+
 form{
     width: 400px;
     display: flex;

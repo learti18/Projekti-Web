@@ -6,51 +6,40 @@
 body{
     background-color: #F7F7F7;
 }
-.header{
-    
-    background: linear-gradient(180deg,  #3E86F5 0%, #6ea4ef 100%);
-    background-position: center; 
-    position: relative; 
-    flex-shrink: 0; 
-    background-size:cover ;   
-}
-nav a {
-    text-decoration: none;
-    color: white;
-    padding: 8px;    
-}
-nav h1{
-    font-size: 30px;
-}
 nav{
+    background: linear-gradient(180deg,  #3E86F5 0%, #6ea4ef 100%);
     display: flex;
-    padding:20px 50px;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 30px 50px;
 }
-.nav-links{
-    text-align: right;
+nav ul{
+    display: flex;
+    flex-direction: row;
+    
 }
-.nav-links ul li{
+nav ul li{
     list-style: none;
-    display: inline-block;
 }
-.nav-links ul li a{
+nav ul li a{
+    border-radius:10px;
     padding: 12px 22px;
-}
-.nav-links ul li a{
-    color: white; 
+    color:#FFF;
     text-decoration: none;
-    size: 24px;
 }
-
-.nav-links ul li a:hover{ 
-    background-color: aliceblue;
-    color:var(--Blue-primary, #3E86F5)!important; 
+nav ul li a:hover{
+    
+    background-color:#FFF;
+    color: #3E86F5;
     transition: 0.5s;
-    border-radius: 10px;    
-} 
 
+}
+.logo{
+    text-decoration: none;
+    color:#FFF;
+    font-size: 30px;
+}
 
 .Accommodation{
     display: flex;
