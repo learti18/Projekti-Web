@@ -17,7 +17,7 @@ nav{
 nav ul{
     display: flex;
     flex-direction: row;
-    
+
 }
 nav ul li{
     list-style: none;
@@ -172,8 +172,7 @@ nav ul li a:hover{
     border-radius:15px;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
     background: #FFF;
-    padding-top: 25px;
-    padding-bottom: 20px;  
+    padding: 18px 20px; 
 }
 .B{
     display: flex;
@@ -192,10 +191,6 @@ nav ul li a:hover{
 
 }
 .img1{
-   
-width: 350px;
-height: 198px;
-padding: 0;
 
 }
 .all{
@@ -335,7 +330,7 @@ padding: 0;
     color: var(--Black-75, rgba(0, 0, 0, 0.50));
 }
 .F{
-    width: 62%;
+    width: 70%;
 }
     
 

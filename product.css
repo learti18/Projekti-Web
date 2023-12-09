@@ -42,12 +42,21 @@ section{
 }
 .grid-picture1{
     grid-area:firstpic;
+    border-radius: 5px;
+    width: 863px;
+    height: 576px; 
 }
 .grid-picture2{
     grid-area:secondpic;
+    width: 425px;
+    height: 283px;
+    border-radius: 5px;
 }
 .grid-picture3{
     grid-area:thirdpic;
+    width: 425px;
+    height: 283px;
+    border-radius: 5px;
 }
 .product-images{
 
