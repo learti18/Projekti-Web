@@ -170,13 +170,12 @@ nav ul li a:hover{
     justify-content:flex-start; 
     align-items: center;  
     gap: 2rem;
-    /* width: 1039px; */
+    width: 100%; 
     border-radius:15px;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
     background: #FFF;
     padding: 18px 20px;
-    margin-left: 10%;
-    margin-right: 10%; 
+   
 }
 .B{
     display: flex;
@@ -198,23 +197,31 @@ nav ul li a:hover{
 
 }
 .all{
+    display: flex;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    
     
 }
-#w{
+#tittle{
     display: flex;
     align-self: flex-end;
     color: var(--Black-primary, #000);
     font-size: 22px;
     font-style: normal;
-    font-weight: 600;
+     font-weight: 600; 
     line-height: normal;  
 }
-#o{
+#receive-off{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #FFF;
     font-style: normal;
     font-size: 12px;
@@ -223,7 +230,10 @@ nav ul li a:hover{
     letter-spacing: 0.26px;
     border-radius: 6px;
     background: var(--Red, #EB5757);
-    padding: 4px 8px;
+    width: 100%;
+    height: 40%;
+    padding: 16px 8px;
+
 }
 .d{
     color: #FFF;
@@ -232,7 +242,7 @@ nav ul li a:hover{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    padding-top: 10px;
+   
 }
 
 
@@ -245,17 +255,17 @@ nav ul li a:hover{
     flex-direction: column; 
 }
 .description-1{
-    /* width: 380px; */
+
     color: var(--Black-75, rgba(0, 0, 0, 1));
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%; 
     letter-spacing: 0.26px;
-    padding-top: 20px;
+    padding-top: 20px; 
 }
 .description-2{
-    /* width: 380px; */
+     width: 380px; 
     color: var(--Black-75, rgba(0, 0, 0, 0.50));
     font-size: 13px;
     font-style: normal;
@@ -268,7 +278,7 @@ nav ul li a:hover{
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    padding-top: 20px;
+    padding-top: 10%; 
 }
 .price{
     display: flex;
@@ -333,15 +343,12 @@ nav ul li a:hover{
 .footer-links p{
     color: var(--Black-75, rgba(0, 0, 0, 0.50));
 }
-.F {
+.all-description{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%; /* Adjust this as needed */
 }
-
-
-
 
 .menu-icon {
     font-size: 30px;
@@ -360,6 +367,10 @@ nav ul li {
     list-style: none;
     margin-right: 20px;
 }
+
+
+
+
 
 @media only screen and (max-width: 670px) {
     .menu-icon {
@@ -391,36 +402,20 @@ nav ul li {
     .menu-icon {
         color: #3E86F5; /* Change color when menu is open */
     }
-
-    nav ul {
-        display: none; /* Hide the menu initially */
-    }
+    
     .hotels{
         display: flex;
-       align-items: flex-start;
-       
+        align-items: flex-start;
         flex-direction: column;
-        /* width: 300px; */
-        height: 500px;
     }
-    #w {
+    #tittle {
         display: flex;
         flex-direction: row;
-        font-size: 15px;
-    
-        
+        font-size: 15px; 
     }
     .img1{
-        width: 300px;
+        width: 100%;
 
-    }
-    #o{
-        display: flex;
-        position: absolute;
-        top: 135px;
-        left: 225px;
-        width: 100px;
-        font-size: 13px;
     }
     .Review-section{
         display: flex;
@@ -437,76 +432,47 @@ nav ul li {
         padding-top: 10px;
     }
 }
-/* @media only screen and (max-width: 337px){
-    .img1{
-        width: 98%;
+
+
+
+@media only screen and (max-width: 910px){
+
+    .hotels{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
     }
-} */
+    #tittle {
+        display: flex;
+        flex-direction: row;
+        font-size: 15px; 
+    }
+    .img1{
+        width: 300px;
+    }
+    .Review-section{
+        font-size:10px ; 
+    }
+    .description-2{
+       font-size:11px ; 
+       line-height: 0.01px;
+    }
+    .description-1{
+        padding-top: 10px;
+    }
+}
+
+
+
 @media only screen and (max-width: 740px){
     
     nav ul li a{
-        
-        padding: 8px;
-    }
-
-
+        padding: 8px;   
+    } 
 }
-@media only screen and (max-width: 723px){
 
-    .hotels{
-        display: flex;
-       align-items: flex-start;
-       
-        flex-direction: column;
-        /* width: 300px; */
-        height: 500px;
-    }
-    #w {
-        display: flex;
-        flex-direction: row;
-        font-size: 15px;
-    
-        
-    }
-    .img1{
-        width: 300px;
 
-    }
-    #o{
-        display: flex;
-        position: absolute;
-        top: 135px;
-        left: 225px;
-        width: 100px;
-        font-size: 13px;
-    }
-    .Review-section{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-       font-size:10px ; 
-    }
-    .description-2{
-       font-size:11px ; 
-        /* width: 10px; */
-        line-height: 0.01px;
-    }
-    .description-1{
-        padding-top: 10px;
-    }
-}
-@media only screen and (max-width: 460px){
-   
-    .booking {
-        padding-top: 10px;
-
-    }
-   
-    .book{
-        gap: 7px;
-        width: 80;
-        height: 35px;
-    }
+@media only screen and (max-width: 548px){
     .description-2{
         letter-spacing: 0.8px;
         font-size: 10px;
@@ -514,28 +480,34 @@ nav ul li {
     }
     .description-1 {
         font-size: 12px;
-        line-height: 0.26px;
     }
-    
-    
-    
+   .img1{
+    width: 98%;
+
+   }  
+   
 }
-@media only screen and (max-width: 430px){
+@media only screen and (max-width: 417px){
+    #receive-off{
+        font-size: 8px;
+        line-height: 5px
+       
+    }
     .description-2{
-        letter-spacing: 0.5px;
-        font-size: 10px;
+        display: none;
 
-    }
-    .footer-links{
-        
-
-    }
-    
-}
-@media only screen and (max-width: 405px){
-    .img1{
-        width: 90%;
     }
 }
 
+@media only screen and (max-width: 384px){
+    #tittle{
+        font-size: 13px;
+    }
+    #price2{
+        font-size: 15px;
+    }
+    .book{
+        width: 74px;
+    }
 
+}

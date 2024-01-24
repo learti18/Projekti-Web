@@ -307,6 +307,7 @@ h2{
     padding: 15px 30px; 
     margin-top: 20px;
     cursor: pointer;
+    text-decoration: none;
 }
 .Contact-info{
     position: relative;
