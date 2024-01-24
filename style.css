@@ -554,11 +554,11 @@ h2{
     cursor: pointer;
 }
 
-/* ------footer-section------ */
-.footer-section{
+/* ------discount-section------ */
+.discount-section{
     padding-top: 50px;
 }
-.discount-section{
+.discount{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -574,7 +574,7 @@ h2{
     padding: 7em 4em;
    
 }
-.discount-section h2{
+.discount h2{
     font-weight: 600;
     color: white;
     font-size: 2.5rem;
@@ -589,28 +589,6 @@ h2{
     padding: 15px 22px;
     text-decoration: none;
 }
-.footer-links{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 150px 40px 0 40px;
-}
-.footer-links ul{
-    display: flex;
-    flex-direction: row;
-}
-.footer-links ul li{
-    list-style: none;
-}
-.footer-links ul li a{
-    padding: 10px 20px;
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.75);
-}
-.footer-links p{
-    color: var(--Black-75, rgba(0, 0, 0, 0.50));
-}
-    
 
 /* BREAKPOINTS */
 @media(max-width:1200px){
@@ -668,20 +646,12 @@ h2{
         font-size: 1rem;
     }
     /* Footer section */
-    .discount-section{
+    .discount{
         padding: 5em 2em;
         border-radius: 60px;
     }
-    .discount-section h2{
+    .discount h2{
         font-size: 1.5rem;
-    }
-    .footer-links,
-    .footer-links ul{
-        flex-direction: column;
-    }
-    .footer-links{
-        justify-content: center;
-        text-align: center;
     }
     .review-card{
         width: 100%;

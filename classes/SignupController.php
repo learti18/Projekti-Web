@@ -38,6 +38,30 @@ class SignupController extends SignUp{
 
         $this->insertUser($this->email,$this->username,$this->password);
     }
+    public function signupAdmin(){
+        if($this->emptyInput() == false){
+            header("location: ../ProjektiWeb/register.php?error=emptyinput");
+            exit();
+        }
+        if($this->invalidUser() == false){
+            header("location: ../ProjektiWeb/register.php?error=invaliduser");
+            exit();
+        }
+        if($this->invalidEmail() == false){
+            header("location: ../ProjektiWeb/register.php?error=invalidemail");
+            exit();
+        }
+        if($this->passwordMatch() == false){
+            header("location: ../ProjektiWeb/register.php?error=passwordsdontmatch");
+            exit();
+        }
+        if($this->userTaken() == false){
+            header("location: ../ProjektiWeb/register.php?error=usertaken");
+            exit();
+        }
+
+        $this->insertAdmin($this->email,$this->username,$this->password);
+    }
     private function emptyInput(){
         if(empty($this->username) || empty($this->email) || empty($this->password) || empty($this->confirmPass)){
             return  false;
