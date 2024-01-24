@@ -216,8 +216,7 @@
             </div>
         </section>
 
-<!-------footer section------>  
-        <footer class="footer-section">
+        <section>
             <?php
                 if(!isset($_SESSION["userid"])){
             ?>
@@ -235,20 +234,12 @@
                 </div>
             <?php
                 }
-            ?>  
-            <div class="footer-links">
-                <p>© 2022 Treloo LLC - All right reserved.</p>
-                <ul>
-                    <li><a href="">Review</a></li>
-                    <li><a href="">Tips</a></li>
-                    <li><a href="Accommodation.html">Destinations</a></li>
-                    <li><a href="">Blog</a></li>
-                </ul>
-            </div>
-        </footer>
+            ?>
+        </section>      
+        
+        <!-------footer section------> 
+        <?php include "footer.php"; ?>
     
-
-
     <script src="travelingWeb.js"></script>
 </body>
 </html>

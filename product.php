@@ -91,15 +91,7 @@
             </div>
             </div>
         </section>
-        <div class="footer-links">
-            <p>© 2022 Treloo LLC - All right reserved.</p>
-            <ul>
-                <li><a href="">Review</a></li>
-                <li><a href="">Tips</a></li>
-                <li><a href="Accommodation.html">Accommodation</a></li>
-                <li><a href="">Blog</a></li>
-            </ul>
-        </div>
+        <?php include "footer.php";  ?>
         <script>
             const images = document.querySelectorAll(".smallImage")
             const largeImage = document.querySelector(".large-image")
