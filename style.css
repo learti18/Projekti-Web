@@ -3,70 +3,36 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    overflow-x: hidden;
+    background-color: #F7F7F7;
+    -webkit-tap-highlight-color: transparent;
+}
 .header{
-    height: 952px;  
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(photos/wallpaper.jpeg), lightgray 50% / cover no-repeat;
+    height: 100vh;  
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%), url(photos/wallpaper.jpeg), lightgray 50% / cover no-repeat;
     background-position: center; 
     position: relative; 
     flex-shrink: 0; 
     background-repeat: no-repeat;
     background-size: cover;
 }
-nav a {
-    text-decoration: none;
-    color: white;
-    padding: 8px;    
-}
-nav h1{
-    font-size: 48px;
-}
-nav{
-    display: flex;
-    padding:2% 6% ;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav-links{
-    
-    text-align: right;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    
-}
-.nav-links ul li a{
-    padding: 12px 22px;
-}
-.nav-links ul li a{
-    color: white; 
-    text-decoration: none;
-    size: 24px;
-}
-
-.nav-links ul li a:hover{ 
-    background-color: aliceblue;
-    color:var(--Blue-primary, #3E86F5)!important; 
-    transition: 0.5s;
-    border-radius: 10px;    
-} 
-
-
-/* -----the text-------- */
-
 .text {
     text-align: center;
-    padding: 150px;
     color: #fff;
-    font-size: 40px; 
-    font-family: Poppins;
-    font-weight: 600;
-    line-height: normal;
-
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    padding: 0 20px;
 }
-
+.text h1{
+    font-weight: 700;
+    font-size: 3.5rem;
+}
 .text p{
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 /* -------search-bar------ */
@@ -183,17 +149,10 @@ nav{
     width: 130px;
     height: 13tpx;
 }
-.search-icon{
-    /* padding-left: 30px; */
-    /* height: 137px; */
-}
+
 /* ------Special upcoming offers----- */
 .offers-section{
-    background-color: #F7F7F7;
-    padding-top: 150px;
-    padding-bottom: 100px;
-    height: 700px;
-
+    padding:  100px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -203,37 +162,48 @@ nav{
     color: var(--Black-75, rgba(0, 0, 0, 0.50));
 }
 .offers-section h2{
-    font-size: 50px;
     font-weight: 600;
+    width: 80%;
+    text-align: center;
+}
+h2{
+    font-size: 3.125rem;
 }
 .offer-selector{
     background-color: white;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
     padding: 5px;
-    border-radius: 8px;   
+    border-radius: 8px;
+    margin: 1em 0;   
 }
-.offer-selector button{
+.toggle-button{
     border: none;
     background-color: #FFFFFF;
     padding: 8px 14px;
     border-radius: 8px;
     cursor:pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
-.offer-selector button:first-child{
-    background: var(--Blue-primary, #3E86F5);
-    color: white;
+.toggle-button:not(.active):hover{
+    background-color: #eaeffd !important;
+    transition: 0.5s !important;
 }
+
 .cards{
     display: flex;
-    justify-content: space-evenly;
-    width: 1200px;
+    flex-direction: row;
+    justify-content: safe center;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
 }
+
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-
-    padding: 20px 10px 30px 20px;
+    padding: 20px 15px 25px 20px;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
     border-radius: 50px;
@@ -253,7 +223,7 @@ nav{
     padding-top: 10px;
     padding-left: 20px;
     line-height: 30px;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 .residence-time span{
     background-color: #FCDDEC;
@@ -266,23 +236,20 @@ nav{
 .destination-title1{
     line-height: 30px;
     padding-left: 20px;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .book-section{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    font-size: 14px;
+    align-items: center;
+    font-size: 0.875rem;
     padding-left: 20px;
-    padding-top: 10px;
     line-height: 30px;
     padding-right: 10px;
 }
 .book-section span{
     color: #000;
-    font-size: 18px;
-    font-weight:700px;
+    font-size: 1.125rem;
+    font-weight:600;
 }
 .buttons{
     background-color: #F2F6FF;
@@ -291,6 +258,7 @@ nav{
     border-radius: 8px;
     padding: 6px 12px;
     text-decoration: none;
+    margin-left: auto;
 }
 .buttons:hover{
     background-color: #3E86F5;
@@ -300,69 +268,51 @@ nav{
 /* ------contact-section----- */
 
 .contact-section{
-    background-color: #F7F7F7;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 6rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 50px;
+    width: 100%;
+    max-width: 1300px;
+    gap: 5rem;
 }
-.img5{
-    width: 400px;
-    height: 800px;
-    border-radius: 75px;
+.contact-img{
+    width: 100%;
 }
 .contact-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    height: 100px;
-    }
+    width: 50%;
+    flex-grow: 1;
+}
 
 .F{
     color: var(--Black-75, rgba(0, 0, 0, 0.50));
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px; 
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+    font-size: 1.125rem;
+    line-height: 2; 
+    padding: 20px 0;
 }
 .T{
     color: var(--Black-primary, #000);
-    font-size: 40px;
-    font-style: normal;
+    font-size: 2.5rem;
     font-weight: 600;
-    line-height: normal;
-    align-self: flex-start;
 }
 .Contact-button{
-    
     border-radius: 10px;
-    background: var(--Blue-primary, #3E86F5);
     border: none;
+    background: var(--Blue-primary, #3E86F5);
     color: var(--White-primary, #FFF);
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 20px;
-    align-self: flex-start;
+    font-size: 1rem;
     padding: 15px 30px; 
-    display: inline-block;
+    margin-top: 20px;
     cursor: pointer;
-
 }
 .Contact-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
     position: relative;
-    
-    
+    flex-grow: 1;
+    width: 50%;
+    max-width: 450px; 
 }
 .TURISTS {
     position: absolute;
@@ -377,19 +327,16 @@ nav{
     border-radius: 35px;
     background: var(--White-primary, #FFF);
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.10);
-    gap: 0rem;
-    padding: 0;
-    align-items: center;
+    margin-left: 20px;
  }
 #span1{
     color: var(--Blue-primary, #3E86F5) !important;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
-    
 }
 #span2{
     color: #000;
-    font-size: 13px;
+    font-size: 0.81rem;
     font-weight: 300; 
 }
 .DESTINATIONS{
@@ -405,18 +352,16 @@ nav{
     border-radius: 35px;
     background: var(--White-primary, #FFF);
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.10);
-    gap: 0rem;
-    padding: 0;
-    align-items: center;
+    margin-right: 20px;
  }
 #span5{
     color: var(--Blue-primary, #3E86F5) !important;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 #span6{
     color: #000;
-    font-size: 13px;
+    font-size: 0.81rem;
     font-weight: 300; 
 }
 .HOTEL{
@@ -432,13 +377,11 @@ nav{
     border-radius: 35px;
     background: var(--White-primary, #FFF);
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.10);
-    gap: 0rem;
-    padding: 0;
-    align-items: center;
+    margin-right: 20px;
 }
 #span3{
     color: var(--Blue-primary, #3E86F5) ;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 #span4{
@@ -449,24 +392,15 @@ nav{
  /* ------Recommended Destination-----  */
 
 .destination-section{
-    background-color: #F7F7F7;
     display: flex;
-    padding-top: 200px;
-    padding-bottom: 100px;
-    height: 700px;
+    padding: 100px 0;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
-} 
+    gap: 40px;
+}
 .destination-title{
-    color: var(--Black-primary, #000);
-    font-family: Poppins;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    
+    text-align: center;  
 }
 .Popular-button{
     width: 100px;
@@ -494,11 +428,14 @@ nav{
     border: none;
 }
 
-.destination-img{
+.destination-cards{
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 1200px;
+    flex-direction: row;
+    justify-content: safe center;
+    gap: 15px;
+    width: 100%;
+    padding: 15px 20px 45px 20px;
+    box-sizing: border-box;
 }
 .card-destination{
     cursor: pointer;
@@ -506,9 +443,12 @@ nav{
     padding: 15px 15px 20px 15px;
     border-radius: 25px;
     background: var(--White-primary, #FFF);
-    box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.10)
+    box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.10);
+    transition: 200ms;
 }
 .card-destination:hover{
+    transform: scale(1.05);
+    transition: 200ms;
     box-shadow: 4px 20px 25px 0px rgba(0, 0, 0, 0.10)
 }
 
@@ -537,9 +477,7 @@ nav{
 
 /* ------Review Section-----  */
 .review-section{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #F7F7F7;
+    padding: 100px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -547,31 +485,24 @@ nav{
 }
 .review-cards{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-
     width: 100%;
-    column-gap: 3em;
+    max-width: 1000px;
+    column-gap: 2em;
+    box-sizing: border-box;
 }
 .review-card{
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
     text-align: center;
-    padding: 100px 40px;
-    line-height: 209%;
-
-    width: 500px;
-
+    padding: 4em 2em;
+    margin:0 auto;
+    line-height: 2;
+    width: 50%;
+    max-width: 500px;
     background-color: white;
     border-radius: 50px;
-
     color: #000;
-    font-size: 20px;
+    font-size: 1.25rem;
+    box-sizing: border-box;
 }
 .author{
     color: var(--Blue-primary, #3E86F5);
@@ -611,7 +542,7 @@ nav{
     column-gap: 2em;
     display: flex;
     flex-direction: row;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .slider-button{
     border: 2px #3e87f594 solid;
@@ -625,32 +556,28 @@ nav{
 
 /* ------footer-section------ */
 .footer-section{
-    padding: 100px 150px 50px 150px;
-    
-    background-color: #F7F7F7;
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
+    padding-top: 50px;
 }
 .discount-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
     background-image: url(photos/discount.svg);
     background-size: cover;
     background-position: center;
     border-radius: 100px;
-    padding: 150px;
+    width: 90%;
+    max-width: 1300px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 7em 4em;
    
 }
-.discount-section h1{
+.discount-section h2{
     font-weight: 600;
     color: white;
-    font-size: 48px;
+    font-size: 2.5rem;
     text-align: center;
     padding-bottom: 30px;
 }
@@ -663,11 +590,10 @@ nav{
     text-decoration: none;
 }
 .footer-links{
-    padding-top: 150px;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 150px 40px 0 40px;
 }
 .footer-links ul{
     display: flex;
@@ -685,3 +611,91 @@ nav{
     color: var(--Black-75, rgba(0, 0, 0, 0.50));
 }
     
+
+/* BREAKPOINTS */
+@media(max-width:1200px){
+    .cards, .destination-cards{
+        overflow-x: auto;
+        overscroll-behavior-inline:contain;
+        scroll-snap-align: center;
+    }
+    .cards::-webkit-scrollbar, .destination-cards::-webkit-scrollbar{
+       width: 0;
+    }
+    .card{
+        scroll-snap-align: center;
+    }
+}
+@media(max-width: 860px){
+
+    /* Header */
+    nav .logo{
+        font-size: 2.2rem;
+    }
+    .text h1{
+        font-size: 1.6rem;
+    }
+    .text p{
+        font-size: .8rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    /* Offers section */
+    .offer-section h2{
+        font-size: 1.8rem;
+    }
+    /* Contact section */
+    .contact-section{
+        padding: 30px;
+    }
+    .contact-text h2{
+        font-size: 1.8rem;
+    }
+    .contact-text p{
+        font-size: .8rem;
+    }
+    /* Destination section */
+  
+    /* review section */
+    .review-section{
+        padding: 80px 20px;
+    }
+    .review-card{
+        padding: 2em 1.5em;
+    }
+    .review-card p{
+        font-size: 1rem;
+    }
+    /* Footer section */
+    .discount-section{
+        padding: 5em 2em;
+        border-radius: 60px;
+    }
+    .discount-section h2{
+        font-size: 1.5rem;
+    }
+    .footer-links,
+    .footer-links ul{
+        flex-direction: column;
+    }
+    .footer-links{
+        justify-content: center;
+        text-align: center;
+    }
+    .review-card{
+        width: 100%;
+    }
+    .review-card2{
+        display: none;
+    }
+
+}
+@media(max-width:390px){
+    .contact-text{
+        text-align: center;
+    }
+    .Contact-button{
+        width: 100%;
+    }
+}

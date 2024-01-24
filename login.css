@@ -10,8 +10,10 @@ body{
 .logo{
     text-decoration: none;
     color: #1B1F2D;
-    padding-left: 40px;
-    padding-top: 20px;
+    position: fixed;
+    font-size: 2.5rem;
+    top: 25px;
+    left: 40px;
 }
 .logo a{
     text-decoration: none;
@@ -28,20 +30,19 @@ section{
     align-items: center;
 }
 .container{
-    padding-top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 80%;
+    justify-content: center;
+    height: 100%;
+    position: relative;
 }
 
 form{
-    width: 400px;
+    width: 86%;
+    max-width: 420px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 550px;
+    gap: 15px;
 }
 .container h1{
     text-align: center;

@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
         }
 
         // Redirect to travelingWeb.html
-        window.location.href = 'travelingWeb.html';
+        window.location.href = 'travelingWeb.php';
 
         return true; // mund te dergohet te serveri
     };
