@@ -1,11 +1,13 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 body{
     background-color: #F7F7F7;
 }
+
 nav{
     background: linear-gradient(180deg,  #3E86F5 0%, #6ea4ef 100%);
     display: flex;
@@ -168,11 +170,13 @@ nav ul li a:hover{
     justify-content:flex-start; 
     align-items: center;  
     gap: 2rem;
-    width: 1039px;
+    /* width: 1039px; */
     border-radius:15px;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
     background: #FFF;
-    padding: 18px 20px; 
+    padding: 18px 20px;
+    margin-left: 10%;
+    margin-right: 10%; 
 }
 .B{
     display: flex;
@@ -241,7 +245,7 @@ nav ul li a:hover{
     flex-direction: column; 
 }
 .description-1{
-    width: 380px;
+    /* width: 380px; */
     color: var(--Black-75, rgba(0, 0, 0, 1));
     font-size: 13px;
     font-style: normal;
@@ -251,7 +255,7 @@ nav ul li a:hover{
     padding-top: 20px;
 }
 .description-2{
-    width: 380px;
+    /* width: 380px; */
     color: var(--Black-75, rgba(0, 0, 0, 0.50));
     font-size: 13px;
     font-style: normal;
@@ -329,9 +333,209 @@ nav ul li a:hover{
 .footer-links p{
     color: var(--Black-75, rgba(0, 0, 0, 0.50));
 }
-.F{
-    width: 70%;
+.F {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Adjust this as needed */
 }
+
+
+
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Initially hidden on larger screens */
+    color: #FFF; /* Set the initial color */
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 670px) {
+    .menu-icon {
+        display: block; /* Display on smaller screens */
+    }
+
+    nav ul {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Adjust as needed based on your layout */
+        left: 0;
+        width: 100%;
+        background-color: #6ea4ef; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    nav ul li {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #6ea4ef;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-icon {
+        color: #3E86F5; /* Change color when menu is open */
+    }
+
+    nav ul {
+        display: none; /* Hide the menu initially */
+    }
+    .hotels{
+        display: flex;
+       align-items: flex-start;
+       
+        flex-direction: column;
+        /* width: 300px; */
+        height: 500px;
+    }
+    #w {
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
     
+        
+    }
+    .img1{
+        width: 300px;
+
+    }
+    #o{
+        display: flex;
+        position: absolute;
+        top: 135px;
+        left: 225px;
+        width: 100px;
+        font-size: 13px;
+    }
+    .Review-section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       font-size:10px ; 
+    }
+    .description-2{
+       font-size:11px ; 
+        /* width: 10px; */
+        line-height: 0.01px;
+    }
+    .description-1{
+        padding-top: 10px;
+    }
+}
+/* @media only screen and (max-width: 337px){
+    .img1{
+        width: 98%;
+    }
+} */
+@media only screen and (max-width: 740px){
+    
+    nav ul li a{
+        
+        padding: 8px;
+    }
+
+
+}
+@media only screen and (max-width: 723px){
+
+    .hotels{
+        display: flex;
+       align-items: flex-start;
+       
+        flex-direction: column;
+        /* width: 300px; */
+        height: 500px;
+    }
+    #w {
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+    
+        
+    }
+    .img1{
+        width: 300px;
+
+    }
+    #o{
+        display: flex;
+        position: absolute;
+        top: 135px;
+        left: 225px;
+        width: 100px;
+        font-size: 13px;
+    }
+    .Review-section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       font-size:10px ; 
+    }
+    .description-2{
+       font-size:11px ; 
+        /* width: 10px; */
+        line-height: 0.01px;
+    }
+    .description-1{
+        padding-top: 10px;
+    }
+}
+@media only screen and (max-width: 460px){
+   
+    .booking {
+        padding-top: 10px;
+
+    }
+   
+    .book{
+        gap: 7px;
+        width: 80;
+        height: 35px;
+    }
+    .description-2{
+        letter-spacing: 0.8px;
+        font-size: 10px;
+
+    }
+    .description-1 {
+        font-size: 12px;
+        line-height: 0.26px;
+    }
+    
+    
+    
+}
+@media only screen and (max-width: 430px){
+    .description-2{
+        letter-spacing: 0.5px;
+        font-size: 10px;
+
+    }
+    .footer-links{
+        
+
+    }
+    
+}
+@media only screen and (max-width: 405px){
+    .img1{
+        width: 90%;
+    }
+}
 
 
