@@ -354,6 +354,7 @@ nav{
     padding: 15px 30px; 
     display: inline-block;
     cursor: pointer;
+    text-decoration: none;
 
 }
 .Contact-info{

@@ -18,6 +18,7 @@
                     <li><a href="Accommodation.html">DESTINATIONS</a></li>
                     <li><a href="login.html">SIGN IN</a></li>
                     <li><a href="register.html">REGISTER</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
                 </ul>
             </div>
         </nav>
@@ -151,7 +152,9 @@
                     let’s find the best destination in world with us. 
                     <br>Would you explore nature paradise in the world, let’s find the best destination in world with us.
                 </p>
-                <button class="Contact-button">Contact US</button>
+                <!-- <button onclick="click" class="Contact-button" id="contactButton">Contact US</button> -->
+                <a href="contact-us.html" class="Contact-button">Contact US</a>
+
             </div>
         </div>
  <!-- ------Recommended Destination----- -->
@@ -242,6 +245,24 @@
                 </ul>
             </div>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            // Wait for the DOM to be fully loaded
+
+            // Find the button element by its ID
+            var contactButton = document.getElementById("contactButton");
+
+            // Add a click event listener to the button
+            contactButton.addEventListener("click", function() {
+                // Replace the URL with the actual URL you want to navigate to
+                window.location.href = "contact-us.html";
+            });
+        });
+
+
+
+        </script>
     
 
 
