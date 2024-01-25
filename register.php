@@ -33,6 +33,7 @@
                 <p id="invalid-confirm" class="invalid-input"></p>
             </div>
 
+            admin<input type="radio" name="admin"><br>
             <div class="btn">
                 <button type="submit" id="submit-btn" name="register">Register</button>
             </div>
@@ -52,10 +53,15 @@
             include "./classes/SignUp.php";
             include "./classes/SignupController.php";
         
-          
-            $signup = new SignupController($email,$username,$password,$confirmPass);
-            $signup->signupUser();
-            header("location: login.php?error=none");
+            if(isset($_POST["admin"])){
+                $signup = new SignupController($email,$username,$password,$confirmPass);
+                $signup->signupAdmin();
+                header("location: login.php?error=none");
+            }else{
+                $signup = new SignupController($email,$username,$password,$confirmPass);
+                $signup->signupUser();
+                header("location: login.php?error=none");
+            }
         }
     ?>
         <script src="register.js"></script>
