@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="Accommodation.css">
 </head>
 <body>
-    <nav>
+
+        <span class="background-color">
+        <?php include("header.php") ?>
+        </span>
+   
+  
+    <!-- <nav>
         
     
 
@@ -22,9 +28,9 @@
 
        
         <label id="menu-toggle" for="menu-toggle" class="menu-icon">&#9776;</label>
-        
+         
 
-    </nav>
+    </nav>  -->
 
 <!-- <div class="Accommodation">
     <div class="B"> 
@@ -454,18 +460,9 @@
  </div>
 
 
- <div class="footer-links">
-    <p>© 2022 Treloo LLC - All right reserved.</p>
-    <ul>
-        <li><a href="">Review</a></li>
-        <li><a href="">Tips</a></li>
-        <li><a href="Accommodation.html">Accommodation</a></li>
-        <li><a href="">Blog</a></li>
-    </ul>
-</div>
-</div>
+ <?php include "footer.php"; ?>
 
-<script>
+<!-- <script>
 
 
 function toggleMenu() {
@@ -478,7 +475,7 @@ document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
 
     
 
-</script>
+</script> -->
 
     
 

@@ -7,8 +7,17 @@
 body{
     background-color: #F7F7F7;
 }
+.background-color{
+    background: linear-gradient(180deg,  #3E86F5 0%, #6ea4ef 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
 
-nav{
+}
+
+/* nav{
     background: linear-gradient(180deg,  #3E86F5 0%, #6ea4ef 100%);
     display: flex;
     flex-direction: row;
@@ -41,7 +50,7 @@ nav ul li a:hover{
     text-decoration: none;
     color:#FFF;
     font-size: 30px;
-}
+} */
 
 .Accommodation{
     display: flex;
@@ -321,7 +330,7 @@ nav ul li a:hover{
     line-height: normal;
     letter-spacing: 0.2px;
 }
-.footer-links{
+/* .footer-links{
     padding-top: 150px;
     width: 100%;
     display: flex;
@@ -347,14 +356,14 @@ nav ul li a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%; /* Adjust this as needed */
+    width: 100%; /* Adjust this as needed 
 }
 
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
-    display: none; /* Initially hidden on larger screens */
-    color: #FFF; /* Set the initial color */
+    display: none;  Initially hidden on larger screens 
+    color: #FFF;  Set the initial color 
 }
 
 nav ul {
@@ -366,7 +375,7 @@ nav ul {
 nav ul li {
     list-style: none;
     margin-right: 20px;
-}
+} */
 
 
 
@@ -490,7 +499,7 @@ nav ul li {
 @media only screen and (max-width: 417px){
     #receive-off{
         font-size: 8px;
-        line-height: 5px
+       
        
     }
     .description-2{

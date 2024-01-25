@@ -18,6 +18,7 @@ body{
     color: var(--Black-primary, #000);
 }
 .all-contact-form{
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,9 +41,10 @@ body{
     display: flex;
     flex-direction: column;
     
+    
 
 }
-#tittle{
+#title{
     color: var(--Black-primary, #000);
     font-size: 38px;
     font-style: normal;
@@ -87,7 +89,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
+   
 }
 #label{
     color: var(--Black-primary, #000);
@@ -114,60 +116,75 @@ body{
 
 }
 
-.footer-links{
-    padding-top: 150px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.submit-button{
+    border-radius: 10px;
+    border: none;
+    background: var(--Blue-primary, #3E86F5);
+    color: var(--White-primary, #FFF);
+    font-size: 13px;
+    padding: 5px 5px;
+    cursor: pointer;
+   
 }
-.footer-links ul{
-    display: flex;
-    flex-direction: row;
-}
-.footer-links ul li{
-    list-style: none;
-}
-.footer-links ul li a{
-    padding: 10px 20px;
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.75);
-}
-.footer-links p{
-    color: var(--Black-75, rgba(0, 0, 0, 0.50));
-}
-@media only screen and (max-width: 1033px){
+
+
+
+@media only screen and (max-width: 1670px){
     .all-contact-form{
-        width: 1000px;
-        /* padding-top: 57;
-        padding-bottom: 50px; */
+         width: 1000px;
+        
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 10px;
     }
-    #tittle{
-        font-size: 30px;
+    .box{
+        width: 332px;
     }
-    #description{
-        font-size: 13px;
+
+}
+@media only screen and (max-width: 900px){
+    .all-contact-form{
+        flex-direction: column;
+
     }
-    #contact-info-text{
-        font-size: 20px;
+    
+}
+@media only screen and (max-width: 547px){
+    .all-contact-form{
+        width: 400px;
     }
-    #info{
-        line-height: 22px;
-        font-size: 12px;
+
+    .contact-form{
+        width: 352px;
+    }
+
+}
+@media only screen and (max-width: 391px){
+    .all-contact-form{
+        width: 350px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .box{
+        width: 296px;
     }
     #label{
         font-size: 15px;
-        line-height: 22px;
-
     }
-    .box{
-        width: 418px;
-        height: 43px;
+    #contact-info-text {
+        font-size: 20px;
     }
-    #box-message{
-        height: 168px;
+    #info{
+        font-size: 13px;
+    }
+    #description {
+        width: 200px;
+        font-size: 15;
+    }
+    #title{
+        font-size: 30px;
+       
     }
 
 }
-
 
