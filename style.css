@@ -37,7 +37,7 @@ body{
 
 /* -------search-bar------ */
 
-.header-search{
+/* .header-search{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -148,7 +148,7 @@ body{
     justify-content: center;
     width: 130px;
     height: 13tpx;
-}
+} */
 
 /* ------Special upcoming offers----- */
 .offers-section{
@@ -307,7 +307,7 @@ h2{
     padding: 15px 30px; 
     margin-top: 20px;
     cursor: pointer;
-    text-decoration: none;
+  
 }
 .Contact-info{
     position: relative;

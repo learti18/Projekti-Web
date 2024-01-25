@@ -104,7 +104,7 @@
             <div class="all-description" >
                      <div class="off">
                         <div><span id="tittle">Lakeside Motel Warefront</span></div>
-                        <div> <span id="receive-off">Book now and receive 15% off</span></div>
+                        <!-- <div> <span id="receive-off">Book now and receive 15% off</span></div> -->
                      </div>
                      <div class="Review-section">  
                         <div class="stars"> 
@@ -261,7 +261,7 @@
             <div class="all-description">
                      <div class="off">
                         <div><span id="tittle">Aghnieim Scepter Hotel</span></div>
-                        <div> <span id="receive-off">Book now and receive 15% off</span></div>
+                        <!-- <div> <span id="receive-off">Book now and receive 15% off</span></div> -->
                      </div>
                      <div class="Review-section">  
                         <div class="stars"> 
