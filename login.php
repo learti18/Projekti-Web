@@ -50,9 +50,14 @@
             
             $login = new LoginContr($username,$password);
             $login->loginUser();
-
+            
             session_start();
-            header("location: travelingWeb.php?error=none");
+            
+            if($_SESSION["role"] == "admin"){
+                header("location: dashboard/dashboard.php");
+            }else{
+                header("location: travelingWeb.php?error=none");
+            }
         }
     ?>
 </body>

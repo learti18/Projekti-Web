@@ -13,7 +13,7 @@
             <li><a href="travelingWeb.php">HOME</a></li>
             <li><a href="Accommodation.php">DESTINATIONS</a></li>
             <?php
-                if(isset($_SESSION["userid"]) && $_SESSION["role"] == "admin"){
+                if(isset($_SESSION["userid"]) &&  $_SESSION["role"]){
             ?>
                 <li><a href="dashboard.php">DASHBOARD</a></li>
             <?php 

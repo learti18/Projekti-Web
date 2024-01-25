@@ -2,6 +2,7 @@
 
 class Login extends DatabaseConnection{
 
+    // check if user exists
     protected function getUser($username,$password){
         $stm = $this->connect()->prepare("SELECT password FROM users WHERE username = ? OR email = ?");
 

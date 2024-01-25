@@ -62,6 +62,8 @@ class SignupController extends SignUp{
 
         $this->insertAdmin($this->email,$this->username,$this->password);
     }
+    
+    // user validation
     private function emptyInput(){
         if(empty($this->username) || empty($this->email) || empty($this->password) || empty($this->confirmPass)){
             return  false;
@@ -69,6 +71,7 @@ class SignupController extends SignUp{
             return true;
         }
     }
+    //
     private function invalidUser(){
         if(!preg_match("/^[a-zA-Z0-9]*$/",$this->username)){
             return false;
