@@ -241,6 +241,8 @@
         <!-------footer section------> 
         <?php include "footer.php"; ?>
     
-    <script src="travelingWeb.js"></script>
+    <script src="travelingWeb.js">
+
+    </script>
 </body>
 </html>

@@ -11,7 +11,7 @@
     
     <div class="container">
         <h1 class="logo"><a href="travelingWeb.php">Treloo</a></h1>
-        <form method="post" action="login.php">
+        <form method="post" action="login.php" onsubmit="validate()">
             <h1>Login</h1>
             <div class="input-box">
                 <label>Username</label>
@@ -38,9 +38,7 @@
             </div>
         </form>
     </div>
-    <!-- <script src="login.js">
-
-    </script> -->
+    <script src="login.js"></script>
     <?php
         include "./classes/DatabaseConnection.php";
         include "./classes/Login.classes.php";

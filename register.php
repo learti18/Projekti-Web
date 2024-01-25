@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1 class="logo"><a href="travelingWeb.php">Treloo</a></h1>
-        <form method="post" action ="register.php">
+        <form method="post" action ="register.php" onsubmit="return validate()" id="registerform">
             <h1>Register</h1>
             <div class="input-box">
                 <label>Email address</label>
@@ -32,12 +32,7 @@
                 <input class="input" type="password" id="confirmpass" name="confirmpass" required>
                 <p id="invalid-confirm" class="invalid-input"></p>
             </div>
-            <div class="input-box">
-                <label>Admin</label><br>
-                <input type="radio" name="admin">
-                <label>User</label><br>
-                <input type="radio">
-            </div>
+
             <div class="btn">
                 <button type="submit" id="submit-btn" name="register">Register</button>
             </div>
@@ -46,12 +41,7 @@
             </div>
         </form>
     </div>
-    <!-- <script src="register.js"></script> -->
     <?php
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
-
         if(isset($_POST["register"])){
             $email = $_POST["email"];
             $username = $_POST["username"];
@@ -62,16 +52,12 @@
             include "./classes/SignUp.php";
             include "./classes/SignupController.php";
         
-            if(isset($_POST["admin"])){
-                $signup = new SignupController($email,$username,$password,$confirmPass);
-                $signup->signupAdmin();
-                header("location: login.php?error=none");
-            }else{
-                $signup = new SignupController($email,$username,$password,$confirmPass);
-                $signup->signupUser();
-                header("location: login.php?error=none");
-            }
+          
+            $signup = new SignupController($email,$username,$password,$confirmPass);
+            $signup->signupUser();
+            header("location: login.php?error=none");
         }
     ?>
+        <script src="register.js"></script>
 </body>
 </html>

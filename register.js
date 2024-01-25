@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (ngjarja) {
     const BtnSubmit = document.getElementById('submit-btn');
-    
     const invalidEmail = document.getElementById('invalid-email');
     const invalidPass = document.getElementById('invalid-pass');
     const invalidConfirm = document.getElementById('invalid-confirm');
@@ -49,9 +48,8 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
             fjalkalimi.focus();
             return false;
         }
-
-        return true; // mund te dergohet te serveri
+        
+         return true;
     };
 
-    BtnSubmit.addEventListener('click', validate);
 });
