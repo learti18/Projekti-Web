@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="contact-us.css">
 </head>
 <body>
+<?php include("header.php") ?>
     <h1 class="logo"><a href="travelingWeb.php">Treloo</a></h1>
     <div class="a">
 <div class="all-contact-form">

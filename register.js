@@ -4,15 +4,15 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
     const invalidPass = document.getElementById('invalid-pass');
     const invalidConfirm = document.getElementById('invalid-confirm');
     const invalidUsername = document.getElementById('invalid-username');
-    /*Funksioni per te e validuar fushat e formes */
+/*Funksioni per te e validuar fushat e formes */
     const emailValid = (email) => {
         const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
         return emailRegex.test(email.toLowerCase());
     };
-
+// Prevent the form from submitting
     const validate = (ngjarja) => {
         ngjarja.preventDefault();
-        
+// Reset error messages
         invalidPass.textContent = "";
         invalidConfirm.textContent = "";
         invalidEmail.textContent = "";
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
         const fjalkalimi = document.getElementById('pass');
         const confirmFjalkalimi = document.getElementById('confirmpass');
         const username = document.getElementById('username');
-
+// Validate email
         if (emailin.value === "") {
             invalidEmail.textContent = "Invalid email!.";
             emailin.focus();
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
             emailin.focus();
             return false;
         }
+// Validate password
         if (fjalkalimi.value === "" || fjalkalimi.value.length < 7) {
             invalidPass.textContent = "Invalid password!"
             fjalkalimi.focus();
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function (ngjarja) {
             fjalkalimi.focus();
             return false;
         }
-        
+// Confirm password match       
          return true;
     };
 

@@ -444,7 +444,7 @@ nav ul li {
 
 
 
-@media only screen and (max-width: 910px){
+@media only screen and (max-width: 920px){
 
     .hotels{
         display: flex;
@@ -457,7 +457,8 @@ nav ul li {
         font-size: 15px; 
     }
     .img1{
-        width: 300px;
+        align-self: center;
+        width: 100%;
     }
     .Review-section{
         font-size:10px ; 
@@ -468,6 +469,9 @@ nav ul li {
     }
     .description-1{
         padding-top: 10px;
+    }
+    .all-description{
+        width: 100%;
     }
 }
 

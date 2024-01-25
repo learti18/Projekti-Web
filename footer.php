@@ -4,7 +4,7 @@
     <ul>
         <li><a href="">Review</a></li>
         <li><a href="">Tips</a></li>
-        <li><a href="Accommodation.html">Accommodation</a></li>
+        <li><a href="Accommodation.php">Accommodation</a></li>
         <li><a href="">Blog</a></li>
     </ul>
 </footer>
