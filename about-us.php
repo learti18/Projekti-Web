@@ -9,25 +9,45 @@
 
 </head>
 <body>
-    <h1 class="logo"><a href="travelingWeb.html">Treloo</a></h1>
-<div>
-    <div>
+    <h1 class="logo"><a href="travelingWeb.php">Treloo</a></h1>
+
+
+    <div class="all">
+    <div class="about-us">
         <h1>About Us</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
     </div>
-
+    
     <div class="cards">
         
        
         <div class="card">
             <div class="card-pic">
-                <img src="photos/lona.svg" alt="pic of lona">
-                <p>FUN</p>
+            <img class="safe" alt="Security week hero" fetchpriority="high" class="mw-100" loading="eager" src="https://cf-assets.www.cloudflare.com/brandfolder/security-week-hero.svg">
+                <p>SAFETY</p>
             </div>
             <p class="residence-time"></p>
-            <h3 class="destination-title1">LOREM</h3>
+            <h3 class="title1">SAFEST IN THE WORLD</h3>
             <div class="book-section">
-                <p><span class="price"></span>
+                <p><span class="description"></span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rem vitae temporibus eaque ad? Nostrum 
+                    deserunt velit nam reprehenderit repudiandae impedit? Eum expedita animi quisquam assumenda, unde odit corrupti repudiandae.
+                </p>
+               
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-pic">
+          
+            <img class="since" src="photos/about-us.svg" alt="">
+                <p>SINCE 1990</p>
+            </div>
+            <p class="residence-time"></p>
+            <h3 class="title1">FROM 1990 - 2024</h3>
+            <div class="book-section">
+                <p><span class="description"></span>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rem vitae temporibus eaque ad? Nostrum 
                     deserunt velit nam reprehenderit repudiandae impedit? Eum expedita animi quisquam assumenda, unde odit corrupti repudiandae.
                 </p>
@@ -37,29 +57,13 @@
 
         <div class="card">
             <div class="card-pic">
-                <img src="photos/lona.svg" alt="pic of lona">
+                <img class="fun" src="photos/fun.jpg" alt="pic of lona">
                 <p>FUN</p>
             </div>
             <p class="residence-time"></p>
-            <h3 class="destination-title1">LOREM</h3>
+            <h3 class="title1">+1M CUSTOMERS</h3>
             <div class="book-section">
-                <p><span class="price"></span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rem vitae temporibus eaque ad? Nostrum 
-                    deserunt velit nam reprehenderit repudiandae impedit? Eum expedita animi quisquam assumenda, unde odit corrupti repudiandae.
-                </p>
-               
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-pic">
-                <img src="photos/lona.svg" alt="pic of lona">
-                <p>FUN</p>
-            </div>
-            <p class="residence-time"></p>
-            <h3 class="destination-title1">LOREM</h3>
-            <div class="book-section">
-                <p><span class="price"></span>
+                <p><span class="description"></span>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rem vitae temporibus eaque ad? Nostrum 
                     deserunt velit nam reprehenderit repudiandae impedit? Eum expedita animi quisquam assumenda, unde odit corrupti repudiandae.
                 </p>
@@ -67,6 +71,7 @@
             </div>
         </div>
     </div>    
-</div>   
+</div>  
+<?php include "footer.php"; ?>  
 </body>
 </html>

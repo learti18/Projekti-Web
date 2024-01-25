@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="contact-us.css">
 </head>
 <body>
-    <h1 class="logo"><a href="travelingWeb.html">Treloo</a></h1>
+    <h1 class="logo"><a href="travelingWeb.php">Treloo</a></h1>
     <div class="a">
 <div class="all-contact-form">
 
@@ -17,7 +17,7 @@
         <div class="contact">
             
                 <div class="contact-tittle">
-                <p id="tittle">
+                <p id="title">
                     Let's talk with us
                 </p>
                 <p id="description">Questions, comments, or suggestions? Simply fill in the form and we’ll be in touch shortly.</p>
@@ -63,6 +63,10 @@
               <textarea name="" id="box-message" cols="30" rows="10" placeholder="Write your messages in here"></textarea>
             </div>
 
+            <div>
+            <input class="submit-button" type="submit" value="Submit">
+            </div>
+
            </form>
 
 
@@ -74,16 +78,7 @@
 </div>
 </div>
 
-        <div class="footer-links">
-            <p>© 2022 Treloo LLC - All right reserved.</p>
-            <ul>
-                <li><a href="">Review</a></li>
-                <li><a href="">Tips</a></li>
-                <li><a href="Accommodation.html">Accommodation</a></li>
-                <li><a href="">Blog</a></li>
-            </ul>
-        </div>
-        </div>
+<?php include "footer.php"; ?>
 
 
 </body>

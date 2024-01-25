@@ -11,7 +11,7 @@
         </label>
         <ul class="sidebar">
             <li><a href="travelingWeb.php">HOME</a></li>
-            <li><a href="Accommodation.html">DESTINATIONS</a></li>
+            <li><a href="Accommodation.php">DESTINATIONS</a></li>
             <?php
                 if(isset($_SESSION["userid"])){
             ?>
@@ -21,7 +21,8 @@
                 }
                 else{
             ?>       
-                <li><a href="login.php">LOGIN</a></li>    
+                <li><a href="login.php">LOGIN</a></li> 
+                <li><a href="about-us.php">ABOUT</a></li>    
                 <li><a href="register.php" class="active">REGISTER</a></li>
             <?php 
                 }
