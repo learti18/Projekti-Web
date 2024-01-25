@@ -32,6 +32,12 @@
                 <input class="input" type="password" id="confirmpass" name="confirmpass" required>
                 <p id="invalid-confirm" class="invalid-input"></p>
             </div>
+            <div class="input-box">
+                <label>Admin</label><br>
+                <input type="radio" name="admin">
+                <label>User</label><br>
+                <input type="radio">
+            </div>
             <div class="btn">
                 <button type="submit" id="submit-btn" name="register">Register</button>
             </div>
@@ -56,10 +62,15 @@
             include "./classes/SignUp.php";
             include "./classes/SignupController.php";
         
-            $signup = new SignupController($email,$username,$password,$confirmPass);
-            $signup->signupUser();
-
-            header("location: login.php?error=none");
+            if(isset($_POST["admin"])){
+                $signup = new SignupController($email,$username,$password,$confirmPass);
+                $signup->signupAdmin();
+                header("location: login.php?error=none");
+            }else{
+                $signup = new SignupController($email,$username,$password,$confirmPass);
+                $signup->signupUser();
+                header("location: login.php?error=none");
+            }
         }
     ?>
 </body>

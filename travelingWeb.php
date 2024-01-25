@@ -216,11 +216,12 @@
             </div>
         </section>
 
-        <section>
+        <!-- DISCOUNT SECTION -->
+        <section class="discount-section">
             <?php
                 if(!isset($_SESSION["userid"])){
             ?>
-                <div class="discount-section">
+                <div class="discount">
                     <h2>Don’t Miss The 50% Discount if You register Today</h2>
                     <a class="register-button" href="register.php">Register Today</a>
                 </div>
@@ -228,7 +229,7 @@
                 }else{
 
             ?>
-                <div class="discount-section">
+                <div class="discount">
                     <h2>Don’t Miss The 50% Discount travel today!</h2>
                     <a class="register-button" href="accommodation.html">Destinations</a>
                 </div>

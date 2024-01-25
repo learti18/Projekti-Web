@@ -13,6 +13,13 @@
             <li><a href="travelingWeb.php">HOME</a></li>
             <li><a href="Accommodation.php">DESTINATIONS</a></li>
             <?php
+                if(isset($_SESSION["userid"]) && $_SESSION["role"] == "admin"){
+            ?>
+                <li><a href="dashboard.php">DASHBOARD</a></li>
+            <?php 
+                }
+            ?>
+            <?php
                 if(isset($_SESSION["userid"])){
             ?>
                 <li><a href="#"><?php echo $_SESSION["useruid"] ?></a></li>    
