@@ -63,7 +63,7 @@
                 </tbody>
             </table>
 
-             <a href="addDestination.html" class="add-product-btn">Add New Product</a>
+             <a href="addDestination.php" class="add-product-btn">Add New Product</a>
         </main>
     </div>
 
