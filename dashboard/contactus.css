@@ -42,7 +42,7 @@ body {
 /* Main Content */
 .main-content {
     flex: 1;
-    padding: 20px;
+    padding: 40px 25px;
     margin: 0 auto;
 }
 table {
@@ -52,7 +52,7 @@ table {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -61,6 +61,8 @@ th, td {
 th {
     background-color: #3E86F5;
     color: #fff;
+    padding: 8px;
+    text-align: left;
 }
 button {
     background-color: #3E86F5;

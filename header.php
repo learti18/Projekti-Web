@@ -13,12 +13,11 @@
         </label>
 <!-- Sidebar navigation links -->        
         <ul class="sidebar">
-            <li><a href="travelingWeb.php">HOME</a></li>
             <li><a href="Accommodation.php">DESTINATIONS</a></li>
             <?php
                 if(isset($_SESSION["userid"]) && $_SESSION["role"] == "admin"){
             ?>
-                <li><a href="dashboard.php">DASHBOARD</a></li>
+                <li><a href="./dashboard/dashboard.php">DASHBOARD</a></li>
             <?php 
                 }
             ?>

@@ -2,60 +2,53 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
+    display: flex;
 }
 
 .container {
     display: flex;
-    height: 100%;
 }
-
 /* Main Content */
 .main-content {
     flex: 1;
-    padding: 20px;
+    padding: 40px 25px;
     transition: margin-left 0.3s;
 }
-table {
+
+.user-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
-    padding: 10px;
+.user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: left;
 }
 
-th {
-    background-color: #3498db;
+.user-table th {
+    padding: 8px;
+    text-align: left;
     color: #fff;
+    background-color: var(--Blue-primary, #3E86F5);
 }
-
-img {
-    max-width: 150px;
-    max-height: 150px;
-}
-
-.action-buttons {
+.actions {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+    gap: 5px;
 }
-
 .edit-btn {
     background-color: #2ecc71; 
 }
-
 .edit-btn:hover {
     background-color: #27ae60; 
 }
-
 .edit-btn , .delete-btn{
+    text-decoration: none;
     width: 5em;
-    padding: 5px 10px;
+    padding: 2px;
+    text-align: center;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -69,28 +62,22 @@ img {
 .delete-btn:hover {
     background-color: #c0392b;
 }
-
-/* Alternate row colors */
-tbody tr:nth-child(even) {
-    background-color: #ecf0f1; /* Light gray */
+.hidden-password {
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-
-tbody tr:nth-child(odd) {
-    background-color: #fff; /* White */
-}
-
-.add-product-btn {
-    margin-top: 20px;
+.adduser-btn{
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #3E86F5;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 25px;
+    padding: 10px 15px;
     transition: background-color 0.3s;
 }
-.add-product-btn:hover {
+.adduser-btn:hover{
     background-color: #2980b9;
 }
-
-

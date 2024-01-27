@@ -12,7 +12,6 @@
         <!-- Sidebar -->
         <?php include "sidebar.php"; ?>
 
-
         <!-- Main Content -->
         <main class="main-content">
             <h1>Update destination</h1>
@@ -50,7 +49,6 @@
         </main>
 
     </div>
-
     <script src="desintaion.js"></script>
 </body>
 </html>

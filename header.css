@@ -15,7 +15,7 @@ nav{
     padding: 2.5em 3.5em; 
     height: 90px;
     background-color: none;
-    /* position: absolute; */
+    position: absolute;
     width: 100%;
     box-sizing: border-box;
     user-select: none;
@@ -42,7 +42,7 @@ nav ul a:hover{
     color:#3E86F5;
 }
 .logo{
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 .logo a{
