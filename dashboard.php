@@ -33,8 +33,6 @@
             $msg = "There was a problem uploading your image";
         }
     };
-
-    
 ?>
 
 <!DOCTYPE html>
