@@ -6,7 +6,7 @@ class DatabaseConnection{
     private $username = "root";
     private $password = "";
 
-    protected function connect(){
+     function connect(){
         try{
             $conn = new PDO("mysql:host=$this->host; dbname=$this->dbname",
                 $this->username,$this->password,array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
@@ -15,8 +15,8 @@ class DatabaseConnection{
                 echo "database connection failed";
                 return null;
             }else{
-                echo "database connection success";
                 return $conn;
+                echo 'success connect';
             }
 
         }catch(PDOException $pdoe){

@@ -15,7 +15,7 @@
         <!-- Main Content -->
         <main class="main-content">
             <h1>Create Destination</h1>
-            <form>
+            <form action="../repository/insert.php" method="post"  enctype="multipart/form-data">
                 <label for="city">City:</label>
                 <input type="text" id="city" name="city" required>
         
@@ -38,18 +38,21 @@
                 <label for="endDate">End Date:</label>
                 <input type="date" id="endDate" name="endDate" required>
         
-                <label for="images">Images:</label>
-                <input type="file" id="images" name="images" accept="image/*" multiple required>
+                <label for="image">Images:</label>
+                <input type="file" id="image" name="image"  required>
         
                 <label for="description">Description:</label>
                 <textarea id="description" name="description" rows="4" required></textarea>
-        
-                <button type="submit">Add Destination</button>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+            
+                <button type="submit" name="insertbtn">Add Destination</button>
             </form>
         </main>
 
     </div>
-
+    <?php include_once '../repository/insert.php';?>
     <script src="desintaion.js"></script>
 </body>
 </html>
