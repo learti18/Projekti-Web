@@ -31,31 +31,46 @@
                 </div>
             </div>
 
-            <form action="">
+            <form method="post">
                 <div>
                     <label><p id="label">Full Name</p></label>
-                    <input class="box" type="text" placeholder="Input your full name here">
+                    <input class="box" type="text" placeholder="Input your full name here" name="fullnanme">
                 </div>
 
                 <div>
                     <label><p id="label">Email</p></label>
-                    <input class="box" type="email" placeholder="Input your email address here">
+                    <input class="box" type="email" placeholder="Input your email address here" name="email">
                 </div>
 
                 <div>
-                    <label><p id="label">Messages</p></label>
-                    <textarea id="box-message" cols="30" rows="10" placeholder="Write your messages here"></textarea>
+                    <label><p id="label">Message</p></label>
+                    <textarea id="box-message" cols="30" rows="10" placeholder="Write your messages here" name="message"></textarea>
                 </div>
 
                 <div>
-                    <input class="submit-button" type="submit" value="Submit">
+                    <input class="submit-button" type="submit" value="Submit" name="submit">
                 </div>
             </form>
         </div>
     </section>
 
     <?php include "footer.php"; ?>
+    <?php 
+        if(isset($_POST["submit"])){
 
+            include "./classes/DatabaseConnection.php";
+            include "./classes/contactus.class.php";
+
+            $fullname = $_POST["fullnanme"];
+            $email = $_POST["email"];
+            $message = $_POST["message"];
+
+            $contact = new ContactUs();
+            $contact->sendMessage($fullname,$email,$message);
+        }
+    
+    
+    ?>
 </body>
 
 </html>

@@ -4,6 +4,7 @@
     padding-top: 20px;
     overflow-y: auto;
     transition: width 0.3s;
+    min-height: 100vh;
 }
 
 .sidebar ul {

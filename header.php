@@ -13,6 +13,7 @@
         </label>
 <!-- Sidebar navigation links -->        
         <ul class="sidebar">
+            <li><a href="about-us.php">ABOUT</a></li>
             <li><a href="Accommodation.php">DESTINATIONS</a></li>
             <?php
                 if(isset($_SESSION["userid"]) && $_SESSION["role"] == "admin"){
@@ -25,15 +26,13 @@
 // Display user-specific links if the user is logged in            
                 if(isset($_SESSION["userid"])){
             ?>
-                <li><a href="#"><?php echo $_SESSION["useruid"] ?></a></li>    
                 <li><a href="logout.php" class="active">LOGOUT</a></li>
             <?php 
                 }
 // Display login and registration links if the user is not logged in                
                 else{
             ?>       
-                <li><a href="login.php">LOGIN</a></li> 
-                <li><a href="about-us.php">ABOUT</a></li>    
+                <li><a href="login.php">LOGIN</a></li>     
                 <li><a href="register.php" class="active">REGISTER</a></li>
             <?php 
                 }

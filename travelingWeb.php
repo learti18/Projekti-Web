@@ -141,7 +141,7 @@
                     let’s find the best destination in world with us. 
                     <br>Would you explore nature paradise in the world, let’s find the best destination in world with us.
                 </p>
-                <a href="contact-us.php"><button class="Contact-button">Contact US</button></a> 
+                <a href="contact-us.php" class="Contact-button">Contact US</a> 
             </div>
         </section>
  <!-- ------Recommended Destination----- -->

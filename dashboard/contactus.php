@@ -1,3 +1,11 @@
+<?php 
+    include "../classes/DatabaseConnection.php";
+    include "../classes/contactus.class.php";
+
+    $contact = new ContactUs();
+    $contacts = $contact->getMessages();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,34 +23,22 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <h1>Contact Us</h1>
-            
-            <!-- Contact Messages Table -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Message</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>JohnDoe</td>
-                        <td>johndoe@example.com</td>
-                        <td>Hello, how are you?</td>
-                    </tr>
-                    <tr>
-                        <td>JaneSmith</td>
-                        <td>janesmith@example.com</td>
-                        <td>Thanks for the information!</td>
-                    </tr>
-                </tbody>
-            </table>
-        </main>
+        <h2>Contact Us Admin Panel</h2>
+
+        <div class="contact-us-card-container">
+            <!-- Message Cards  -->
+            <?php foreach($contacts as $contact){ ?>
+                <div class="contact-us-card">
+                    <a class="remove-button" name="delete" href="deleteContact.php?id=<?php echo $contact["id"] ?>">Delete</a>
+                    <div class="message-details">
+                        <div class="full-name"><?php echo $contact["fullname"]; ?></div>
+                        <div class="email"><?php echo $contact["email"]; ?></div>
+                        <div class="message"><?php echo $contact["message"]; ?></div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
 
     </div>
-
-    <script src="desintaion.js"></script>
 </body>
 </html>
