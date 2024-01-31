@@ -74,8 +74,65 @@
                     <button class="toggle-button" type="button" id="family-btn">Family</button>
                 </div>
                 <div class="cards">
-                    <div class="card">
-                        <div class="card-pic">
+                 
+
+                    <?php
+                     include_once './repository/repositoryDestinations.php';
+                    $repositoryDestinations = new respositoryDestinations();
+                    $destinations = $repositoryDestinations->getDestinationsByCategory('team'); // Replace 'team' with the desired category
+
+            foreach ($destinations as $destination) {
+                            $image_destination = $repositoryDestinations->getImage($destination['destination_id']);
+                            // Replace static values with dynamic values from the database
+                            $imageUrl = !empty($image_destination) ? './photos/' . $image_destination['image_url'] : './photos/default_image.jpg';
+                            $city = $destination['city'];
+                            $country = $destination['country'];
+                            $description = $destination['description'];
+                            $price = $destination['price'];
+                     ?>
+
+                <div class="card">
+
+                    <div class="card-pic">
+                        <img class="img1"  src="<?= $imageUrl ?>" alt="pic of the sea">
+                        <p><?= date('d M Y', strtotime($destination['start_date'])) ?></p>
+                    </div>
+
+                    <p class="residence-time"><span><?= $destination['category'] ?></span> <?= $destination['start_date'] ?>, <?= $destination['end_date'] ?></p>
+                    <h3 class="destination-title1"><?= $city ?></h3>
+                    <div class="book-section">
+                        <p><span class="price"><?= $price ?>$</span>/Person</p>
+                        <a href="product.php?id=<?= $destination['destination_id'] ?>" class="buttons">Book Now</a>
+                    </div>
+            </div>
+
+        <?php
+    }
+?>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- <div class="card-pic">
                             <img src="photos/logasea.svg" alt="pic of the sea">
                             <p>14 FEB 2022</p>
                         </div>
@@ -110,7 +167,7 @@
                             <a href="product.php" class="buttons">Book Now</a>
                         </div>
                     </div>
-                </div>            
+                </div>             -->
         </section>
 
 <!-- ----contact-section----- -->
@@ -174,6 +231,7 @@
                 <span class="photos-destination2"><img src="photos/Location.svg" >Combodia</span>
             </a>
             </div>
+
 
 
 

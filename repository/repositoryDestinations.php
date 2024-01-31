@@ -125,6 +125,19 @@ class respositoryDestinations{
     
         $statement->execute([$imageFilename, $destination_id]);
     }
+    function getDestinationsByCategory($category)
+    {
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM destinations WHERE category = ?";
+
+        $statement = $conn->prepare($sql);
+        $statement->execute([$category]);
+
+        $destinations = $statement->fetchAll();
+
+        return $destinations;
+    }
 
     
 }
