@@ -6,6 +6,7 @@ body {
 
 .container {
     display: flex;
+    height: 100%;
 }
 /* Main Content */
 .main-content {
@@ -22,7 +23,6 @@ form {
     padding: 20px;
     width: 100%;
     max-width: 700px;
-    margin: 20px;
     box-sizing: border-box;
 }
 
@@ -38,7 +38,7 @@ input, textarea, select {
     padding: 10px;
     margin-bottom: 16px;
     box-sizing: border-box;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 select {
     font-size: 1.2rem;

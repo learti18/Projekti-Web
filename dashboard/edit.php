@@ -70,7 +70,6 @@ $destination_id = isset($_GET['id']) ? $_GET['id'] : null;
         <!-- Sidebar -->
         <?php include "sidebar.php"; ?>
 
-
         <!-- Main Content -->
         <main class="main-content">
             <h1>Update destination</h1>

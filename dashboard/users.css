@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+}
+
+.container {
+  display: flex;
+}
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px 25px;
+  transition: margin-left 0.3s;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.user-table th {
+  padding: 8px;
+  text-align: left;
+  color: #fff;
+  background-color: var(--Blue-primary, #3e86f5);
+}
+.actions {
+  display: flex;
+  gap: 5px;
+}
+.edit-btn {
+  background-color: #2ecc71;
+}
+.edit-btn:hover {
+  background-color: #27ae60;
+}
+.edit-btn,
+.delete-btn {
+  text-decoration: none;
+  width: 5em;
+  padding: 2px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.delete-btn {
+  background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+.hidden-password {
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.adduser-btn {
+  display: inline-block;
+  background-color: #3e86f5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 25px;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+.adduser-btn:hover {
+  background-color: #2980b9;
+}

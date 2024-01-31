@@ -33,7 +33,7 @@
                 <p id="invalid-confirm" class="invalid-input"></p>
             </div>
             <div class="btn">
-                <button type="submit" id="submit-btn" name="register">Register</button>
+                <button type="submit" id="submit-btn" name="submit">Register</button>
             </div>
             <div class="register">
                 <label>Already have an account? <a href="login.php">Login</a></label>
@@ -41,19 +41,25 @@
         </form>
     </div>
     <?php
-        if(isset($_POST["register"])){
+        if(isset($_POST["submit"])){
             $email = $_POST["email"];
             $username = $_POST["username"];
             $password = $_POST["password"];
             $confirmPass = $_POST["confirmpass"];
+            $role = $_POST["role"];
+            if($role == null){
+                $role = "user";
+            }
             
             include "./classes/DatabaseConnection.php";
-            include "./classes/SignUp.php";
-            include "./classes/SignupController.php";
-        
-          
-            $signup = new SignupController($email,$username,$password,$confirmPass);
-            $signup->signupUser();
+            include "./classes/User.php";
+            include "./classes/UserValidator.php";
+            include "./classes/UserManager.php";
+            
+            $user = new User($email,$username,$password,$confirmPass,$role);
+            $userManager = new UserManager();
+
+            $userManager->signupUser($user);
             header("location: login.php?error=none");
         }
     ?>

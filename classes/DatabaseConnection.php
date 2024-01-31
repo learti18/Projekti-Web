@@ -12,7 +12,6 @@ class DatabaseConnection{
                 $this->username,$this->password,array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 
             if(!$conn){
-                echo "database connection failed";
                 return null;
             }else{
                 return $conn;
