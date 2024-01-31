@@ -15,28 +15,40 @@ if(isset($_POST['insertbtn'])){
                 $end_date = $_POST["endDate"];
                 $description = $_POST["description"];
                 $price= $_POST["price"];
-                $image=$_FILES["image"];
-
+                $images=$_FILES["images"];
                 $destination_id = $city.rand(100,999);
-
-                $imageFilename=$image['name'];
-                $imageFileError=$image['error'];
-                $imageFileTemp=$image['tmp_name'];
-                $filename_seperate =explode('.', $imageFilename);
-                $file_extension = strtolower(end($filename_seperate ));
-                $extension = array('jpeg','jpg','png');
-
-
-                if (in_array($file_extension, $extension)) {
-
-                    $upload_image='../photos/'. $imageFilename;
-                    move_uploaded_file($imageFileTemp, $upload_image);
-                    
-                    $destinations  = new destinations($destination_id, $imageFilename, $city, $country, $category, $start_date, $end_date, $description, $price);
+                $uploadDir = '../uploads/';
+                $uploadedImageUrls = [];
+        
+                foreach ($_FILES['images']['name'] as $key => $imageFilename) {
+                    $imageFileError = $_FILES['images']['error'][$key];
+                    $imageFileTemp = $_FILES['images']['tmp_name'][$key];
+                    $filename_separate = explode('.', $imageFilename);
+                    $file_extension = strtolower(end($filename_separate));
+                    $allowed_extensions = array('jpeg', 'jpg', 'png');
+        
+                    if (in_array($file_extension, $allowed_extensions)) {
+                        $upload_image = $uploadDir . $imageFilename;
+                        move_uploaded_file($imageFileTemp, $upload_image);
+                        $uploadedImageUrls[] = $upload_image; 
+                    }
+                }
+        
+                if (!empty($uploadedImageUrls)) {
+                    $city = $_POST["city"];
+                    $country = $_POST["country"];
+                    $category = $_POST["category"];
+                    $start_date = $_POST["startDate"];
+                    $end_date = $_POST["endDate"];
+                    $description = $_POST["description"];
+                    $price = $_POST["price"];
+                    $destination_id = $city . rand(100, 999);
+        
+                    $imageUrls = implode(',', $uploadedImageUrls);
+                    $destinations = new destinations($destination_id, $imageUrls, $city, $country, $category, $start_date, $end_date, $description, $price);
                     $repositoryDestinations = new respositoryDestinations();
-
+        
                     $repositoryDestinations->insertDestinations($destinations);
-                    
                 }
     }   
 }

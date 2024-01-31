@@ -9,12 +9,12 @@ class destinations{
     private $end_date;
     private $description;
     private $price;
-    private $image;
+    private $images;
 
 
-    function __construct($destination_id,$image,$city,$country,$category,$start_date,$end_date,$description,$price){
+    function __construct($destination_id,$images,$city,$country,$category,$start_date,$end_date,$description,$price){
             $this->destination_id = $destination_id;
-            $this->image = $image;
+            $this->images = $images;
             $this->city = $city;
             $this->country = $country;
             $this->category = $category;
@@ -48,10 +48,9 @@ class destinations{
     function getPrice(){
         return $this->price;
     }
-    function getImage(){
-        return $this->image;
+    function getImages() {
+        return explode(',', $this->images);
     }
-
 }
 
 ?>
