@@ -73,61 +73,41 @@
                         <button class="toggle-button" type="button" id="couple-btn">Couple</button>
                         <button class="toggle-button" type="button" id="family-btn">Family</button>
                     </div> -->
+                    
 
-                    <?php
-                            include_once './repository/repositoryDestinations.php';
-                            $repositoryDestinations = new respositoryDestinations();
+                         <section class="offers-section">
+                            <h2>Special Upcoming Offers</h2>
+                            
+                            <div class="offer-selector">
+                                <!-- Add category buttons dynamically using PHP -->
+                                <?php
+                                    include_once './repository/repositoryDestinations.php';
+                                    $repositoryDestinations = new respositoryDestinations();
+                                    $categories = $repositoryDestinations->getAllCategories();
+                                    $categoryValues = array_values($categories);
 
-                            // Fetch categories from the database
-                            $categories = $repositoryDestinations->getAllCategories();
-
-                            // Use the first category as the default
-                            $defaultCategory = !empty($categories) ? $categories[0] : 'team';
-
-                            // Fetch destinations for the default category
-                            // Fetch destinations for the default category along with image information
-                            $destinations = $repositoryDestinations->getDestinationsWithImagesByCategory($defaultCategory);
-                            echo print_r( $destinations);
-                            ?>
-
-                    <section class="offers-section">
-                        <h2>Special Upcoming Offers</h2>
-                        <div class="offer-selector">
-                            <?php
-                            // Display category buttons
-                            foreach ($categories as $category) {
-                                echo '<button class="toggle-button" type="button" data-category="' . $category . '">' . ucfirst($category) . '</button>';
-                            }
-                            ?>
+                                    foreach ($categoryValues as $category) {
+                                        echo '<button class="toggle-button" type="button" data-category="' . $category . '">' . ucfirst($category) . '</button>';
+                                    }
+                                ?>
                             </div>
 
                             <div class="cards">
-                                <?php
-                                // Display destinations for the default category
-                                    foreach ($destinations as $destination) {
-                                        echo '<script>displayDestinations(' . json_encode($destinations) . ')</script>';
-
-                                    }
-                                    
-                                ?>
+                                <!-- Display destinations dynamically using JavaScript -->
                             </div>
                         </section>
 
                         <script src="category.js"></script>
 
 
-                
 
 
 
 
 
+                   
 
-
-
-
-
-   </section>
+   
 
 
 

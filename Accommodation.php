@@ -12,8 +12,7 @@
 <body>
 
  
-        <?php include("header.php") ?>
-    </span>
+<?php include("header.php"); ?>
 
 
     <!-- <nav>

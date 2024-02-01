@@ -127,30 +127,21 @@ class respositoryDestinations{
     
         $statement->execute([$imageFilename, $destination_id]);
     }
-    // function getDestinationsByCategory($category)
-    // {
-    //     $conn = $this->connection;
-
-    //     $sql = "SELECT * FROM destinations WHERE category = ?";
-
-    //     $statement = $conn->prepare($sql);
-    //     $statement->execute([$category]);
-
-    //     $destinations = $statement->fetchAll();
-
-    //     return $destinations;
-    // }
-    // // Get all distinct categories from the destinations table
     public function getAllCategories() {
-        $sql = "SELECT DISTINCT category FROM destinations"; // Replace 'destinations' with your actual table name
-        $result = $this->connection->query($sql);
+        $allowedCategories = ['team', 'couple', 'family'];
 
+        $allowedCategoriesStr = implode("','", $allowedCategories);
+    
+        $sql = "SELECT DISTINCT category FROM destinations WHERE category IN ('$allowedCategoriesStr')";
+        $result = $this->connection->query($sql);
+    
         $categories = array();
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $categories[] = $row['category'];
         }
-
+    
         return $categories;
+    
     }
     public function getDestinationsWithImagesByCategory($category) {
         $allowedCategories = ['team', 'couple', 'family'];

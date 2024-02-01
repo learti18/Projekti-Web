@@ -186,8 +186,9 @@ nav ul li a:hover{
   flex-direction: column;
 }
 .img1 {
-  width: 10px;
-  height: 5px;
+  width: 50%;
+  border-radius: 10px;
+  
 }
 .all {
   display: flex;
