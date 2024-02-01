@@ -39,7 +39,7 @@
                 <input type="date" id="endDate" name="endDate" required>
         
                 <label for="image">Images:</label>
-                <input type="file" id="image" name="image"  required>
+                <input type="file" id="image" name="images[]" multiple required>
         
                 <label for="description">Description:</label>
                 <textarea id="description" name="description" rows="4" required></textarea>

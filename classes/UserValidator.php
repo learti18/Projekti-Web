@@ -19,10 +19,6 @@ class UserValidator{
         }
 
         return $error;
-        // if($this->userTaken() == false){
-        //     header("location: ../ProjektiWeb/register.php?error=usertaken");
-        //     return false;
-        // } 
     }
     // user validation
     private function emptyInput($user){
@@ -32,7 +28,7 @@ class UserValidator{
             return true;
         }
     }
-    //
+
     private function invalidUser($user){
         if(!preg_match("/^[a-zA-Z0-9]*$/",$user->getUsername())){
             return false;
@@ -54,11 +50,4 @@ class UserValidator{
             return true;
         }
     }
-    // private function userTaken($user){
-    //     if(!$this->checkUser($this->username,$this->email)){
-    //         return false;
-    //     }else{
-    //         return true;
-    //     }
-    // }
 }

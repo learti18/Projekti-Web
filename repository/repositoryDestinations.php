@@ -16,7 +16,7 @@ class respositoryDestinations{
         $conn = $this->connection;
 
         $destination_id = $destination->getdestination_id();
-        $image=$destination->getImage();
+        $images = $destination->getImages();
         $city= $destination->getCity();
         $country = $destination->getCountry();
         $category = $destination->getCategory();
@@ -33,14 +33,16 @@ class respositoryDestinations{
 
         $statement->execute([null, $city, $country, $category, $start_date , $end_date, $description , $price]);
         $lastInsertedDestinationId = $conn->lastInsertId();
-        $sql2 = "INSERT INTO destination_images (image_id, destination_id, image_url) VALUES (null, ?, ?)";
+            // Get the last inserted destination ID
 
-        $statement2 = $conn->prepare($sql2);
-
-        $statement2->execute([$lastInsertedDestinationId, $image]);
-
-        echo "<script> alert('Destination has been inserted successfully!'); </script>";
-
+    
+        // Insert multiple images for the destination
+        foreach ($images as $image) {
+            $sql2 = "INSERT INTO destination_images (image_id, destination_id, image_url) VALUES (null, ?, ?)";
+            $statement2 = $conn->prepare($sql2);
+            $statement2->execute([$lastInsertedDestinationId, $image]);
+        }
+        echo "<script> alert('Destination has been inserted successfully!');document.location='addDestinations.php'; </script>";
     }
 
     function getAllDestinations(){

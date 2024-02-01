@@ -11,7 +11,92 @@
 
 <body>
 
+ 
         <?php include("header.php") ?>
+    </span>
+
+
+    <!-- <nav>
+        
+    
+
+        <h1><a href="travelingWeb.html" class="logo">Treloo</a></h1>
+        <ul>
+            <li><a href="travelingWeb.html">HOME</a></li>
+            <li><a href="Accommodation.html">DESTINATIONS</a></li>
+            <li><a href="login.html">SIGN IN</a></li>
+            <li><a href="register.html">REGISTER</a></li>
+        </ul>
+
+       
+        <label id="menu-toggle" for="menu-toggle" class="menu-icon">&#9776;</label>
+         
+
+    </nav>  -->
+
+    <!-- <div class="Accommodation">
+    <div class="B"> 
+        <div >
+            <div class="Filter">
+            <p>Filter by</p>
+        </div>
+        <div class="budget-section">
+            <div class="Your-budget">
+                <p>Your budget per day</p>
+            </div>
+            <div class="radio-section">     
+                 <div class="radio">
+                <div> <input class="check-box" type="radio" name="p">
+                $ 0 - $ 200</div>
+                <div>200</div>
+                 </div>
+                 <div class="radio">
+              <div>  <input class="check-box" type="radio" name="p">
+                $ 0 - $ 200</div>
+                <div>200</div>
+
+                 </div>
+                 <div class="radio">
+               <div> <input class="check-box" type="radio" name="p">
+                $ 0 - $ 200</div>
+                <div>200</div>
+
+            </div>
+            <div class="radio">
+             <div><input class="check-box" type="radio" name="p">
+                $ 0 - $ 200 </div>
+                <div>200</div>
+
+            </div>
+            <div class="radio">
+             <div><input class="check-box" type="radio" name="p">
+                $ 0 - $ 200</div>
+                <div>200</div>
+            </div>
+        </div>
+        </div>
+        </div>
+    
+        
+        <div class="ratings" >
+            <div id="rating">Rating</div>
+            <div class="section">
+            <div><span>Show only ratings more than</span></div>
+            <div class="raiting-section" >
+               <div id="A"> <button>1 <img src="photos/Star.svg" alt=""></button> </div>
+               <div id="A"> <button>1 <img src="photos/Star.svg" alt=""></button> </div>
+               <div id="A"> <button>1 <img src="photos/Star.svg" alt=""></button> </div>
+               <div id="A"> <button>1 <img src="photos/Star.svg" alt=""></button> </div>
+               <div id="A"> <button>1 <img src="photos/Star.svg" alt=""></button> </div> 
+            </div>
+            </div> 
+        </div>
+    
+
+    </div> -->
+
+
+
 
     <div class="all">
 
@@ -355,9 +440,9 @@
     </div>
 
 
-  
+    <?php include "footer.php"; ?>
 
-    <script>
+    <!-- <script>
 
 
 function toggleMenu() {
