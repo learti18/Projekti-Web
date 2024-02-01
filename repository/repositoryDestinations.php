@@ -125,20 +125,60 @@ class respositoryDestinations{
     
         $statement->execute([$imageFilename, $destination_id]);
     }
-    function getDestinationsByCategory($category)
-    {
-        $conn = $this->connection;
+    // function getDestinationsByCategory($category)
+    // {
+    //     $conn = $this->connection;
 
-        $sql = "SELECT * FROM destinations WHERE category = ?";
+    //     $sql = "SELECT * FROM destinations WHERE category = ?";
 
-        $statement = $conn->prepare($sql);
-        $statement->execute([$category]);
+    //     $statement = $conn->prepare($sql);
+    //     $statement->execute([$category]);
 
-        $destinations = $statement->fetchAll();
+    //     $destinations = $statement->fetchAll();
 
+    //     return $destinations;
+    // }
+    // // Get all distinct categories from the destinations table
+    public function getAllCategories() {
+        $sql = "SELECT DISTINCT category FROM destinations"; // Replace 'destinations' with your actual table name
+        $result = $this->connection->query($sql);
+
+        $categories = array();
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $categories[] = $row['category'];
+        }
+
+        return $categories;
+    }
+    public function getDestinationsWithImagesByCategory($category) {
+        $allowedCategories = ['team', 'couple', 'family'];
+    
+        // Check if the provided category is allowed
+        if (!in_array($category, $allowedCategories)) {
+            return [];
+        }
+    
+        $allowedCategoriesStr = implode("','", $allowedCategories);
+    
+        $sql = "SELECT destinations.*, destination_images.image_url 
+                FROM destinations
+                LEFT JOIN destination_images ON destinations.destination_id = destination_images.destination_id
+                WHERE destinations.category = '$category'
+                AND destinations.category IN ('$allowedCategoriesStr')";
+    
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute();
+    
+        $destinations = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
         return $destinations;
     }
+    
+    
+    }
+    
+
 
     
-}
+
 ?>

@@ -63,55 +63,71 @@
 </div>
             </div>
         </div>
-    </div>
-    </section> -->
-    <!-- offers-section -->
-        <section class="offers-section">
-                <h2>Special Upcoming Offers</h2>
-                <div class="offer-selector">
-                    <button class="toggle-button" type="button" id="team-btn">Team</button>
-                    <button class="toggle-button" type="button" id="couple-btn">Couple</button>
-                    <button class="toggle-button" type="button" id="family-btn">Family</button>
                 </div>
-                <div class="cards">
-                 
+                </section> -->
+                <!-- offers-section -->
+
+                <!-- <h2>Special Upcoming Offers</h2> -->
+                    <!-- <div class="offer-selector">
+                        <button class="toggle-button" type="button" id="team-btn">Team</button>
+                        <button class="toggle-button" type="button" id="couple-btn">Couple</button>
+                        <button class="toggle-button" type="button" id="family-btn">Family</button>
+                    </div> -->
 
                     <?php
-                     include_once './repository/repositoryDestinations.php';
-                    $repositoryDestinations = new respositoryDestinations();
-                    $destinations = $repositoryDestinations->getDestinationsByCategory('team'); // Replace 'team' with the desired category
+                            include_once './repository/repositoryDestinations.php';
+                            $repositoryDestinations = new respositoryDestinations();
 
-            foreach ($destinations as $destination) {
-                            $image_destination = $repositoryDestinations->getImage($destination['destination_id']);
-                            // Replace static values with dynamic values from the database
-                            $imageUrl = !empty($image_destination) ? './photos/' . $image_destination['image_url'] : './photos/default_image.jpg';
-                            $city = $destination['city'];
-                            $country = $destination['country'];
-                            $description = $destination['description'];
-                            $price = $destination['price'];
-                     ?>
+                            // Fetch categories from the database
+                            $categories = $repositoryDestinations->getAllCategories();
 
-                <div class="card">
+                            // Use the first category as the default
+                            $defaultCategory = !empty($categories) ? $categories[0] : 'team';
 
-                    <div class="card-pic">
-                        <img class="img1"  src="<?= $imageUrl ?>" alt="pic of the sea">
-                        <p><?= date('d M Y', strtotime($destination['start_date'])) ?></p>
-                    </div>
+                            // Fetch destinations for the default category
+                            // Fetch destinations for the default category along with image information
+                            $destinations = $repositoryDestinations->getDestinationsWithImagesByCategory($defaultCategory);
+                            echo print_r( $destinations);
+                            ?>
 
-                    <p class="residence-time"><span><?= $destination['category'] ?></span> <?= $destination['start_date'] ?>, <?= $destination['end_date'] ?></p>
-                    <h3 class="destination-title1"><?= $city ?></h3>
-                    <div class="book-section">
-                        <p><span class="price"><?= $price ?>$</span>/Person</p>
-                        <a href="product.php?id=<?= $destination['destination_id'] ?>" class="buttons">Book Now</a>
-                    </div>
-            </div>
+                    <section class="offers-section">
+                        <h2>Special Upcoming Offers</h2>
+                        <div class="offer-selector">
+                            <?php
+                            // Display category buttons
+                            foreach ($categories as $category) {
+                                echo '<button class="toggle-button" type="button" data-category="' . $category . '">' . ucfirst($category) . '</button>';
+                            }
+                            ?>
+                            </div>
 
-        <?php
-    }
-?>
-   
+                            <div class="cards">
+                                <?php
+                                // Display destinations for the default category
+                                    foreach ($destinations as $destination) {
+                                        echo '<script>displayDestinations(' . json_encode($destinations) . ')</script>';
+
+                                    }
+                                    
+                                ?>
+                            </div>
+                        </section>
+
+                        <script src="category.js"></script>
 
 
+                
+
+
+
+
+
+
+
+
+
+
+   </section>
 
 
 
@@ -168,7 +184,7 @@
                         </div>
                     </div>
                 </div>             -->
-        </section>
+        
 
 <!-- ----contact-section----- -->
         <section class="contact-section">
