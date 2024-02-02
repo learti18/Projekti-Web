@@ -1,36 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var buttons = document.querySelectorAll(".toggle-button");
+    // Set default category
+    var defaultCategory = "team"; // Replace with your default category
+    var defaultCategory2 = "adventure"; // Replace with your default category
+    fetchDestinations(defaultCategory, displayDestinations);
+    fetchDestinations(defaultCategory2, displayDestinations2);
+
+    initializeToggleButton(".toggle-button", displayDestinations);
+    initializeToggleButton(".toggle-button2", displayDestinations2);
+});
+
+function initializeToggleButton(selector, displayFunction) {
+    var buttons = document.querySelectorAll(selector);
 
     buttons.forEach(function (button) {
         button.addEventListener("click", function () {
             var category = this.getAttribute("data-category");
-            buttons.forEach(function (btn) {
-                btn.classList.remove("active");
-            });
+            fetchDestinations(category, displayFunction);
+        });
+    });
+}
 
 function fetchDestinations(category, displayFunction) {
     clearDestinations(displayFunction); // Clear existing destinations for the specific set
 
-            fetch("fetch_destinations.php", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: "category=" + category,
-            })
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                clearDestinations(); // Clear existing destinations
-                displayDestinations(data);
-            })
-            .catch(function (error) {
-                console.error("Error fetching data: ", error);
-            });
-        });
+    fetch("fetch_destinations.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: "category=" + category,
+    })
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        displayFunction(data);
+    })
+    .catch(function (error) {
+        console.error("Error fetching data: ", error);
     });
-});
+}
 
 function clearDestinations(displayFunction) {
     if (displayFunction === displayDestinations) {
@@ -40,13 +49,13 @@ function clearDestinations(displayFunction) {
     }
 }
 
-function displayDestinationCard(destination) {
+function displayDestinationCard(destination, destinationClass) {
     var imageUrl = destination.image_url !== '' ? './photos/' + destination.image_url : './photos/default_image.jpg';
     var city = destination.city;
     var price = destination.price;
 
     var cardHtml = `
-        <div class="card">
+        <div class="${destinationClass}">
             <div class="card-pic">
                 <img class="img1" src="${imageUrl}" alt="pic of the sea">
                 <p>${new Date(destination.start_date).toLocaleDateString()}</p>
@@ -63,8 +72,34 @@ function displayDestinationCard(destination) {
     document.querySelector(".cards").insertAdjacentHTML('beforeend', cardHtml);
 }
 
+function displayDestinationCard2(destination) {
+    var imageUrl = destination.image_url !== '' ? './photos/' + destination.image_url : './photos/default_image.jpg';
+    var city = destination.city;
+
+    var cardHtml = `
+        <a class="card-destination" href="product.php">
+            <span class="photos-destination">
+                <img src="${imageUrl}" alt="Image of ${city}">
+                ${city}
+            </span>
+            <span class="photos-destination2">
+                <img src="photos/Location.svg" alt="Location icon">
+                ${destination.country}
+            </span>
+        </a>
+    `;
+
+    document.querySelector(".destination-cards").insertAdjacentHTML('beforeend', cardHtml);
+}
+
 function displayDestinations(destinations) {
     destinations.forEach(function (destination) {
-        displayDestinationCard(destination);
+        displayDestinationCard(destination, "card");
+    });
+}
+
+function displayDestinations2(destinations) {
+    destinations.forEach(function (destination) {
+        displayDestinationCard2(destination);
     });
 }
