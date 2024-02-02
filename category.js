@@ -1,28 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Set default category
-    var defaultCategory = "team"; // Replace with your default category
-    var defaultCategory2 = "adventure"; // Replace with your default category
-    fetchDestinations(defaultCategory, displayDestinations);
-    fetchDestinations(defaultCategory2, displayDestinations2);
-
-    initializeToggleButton(".toggle-button", displayDestinations);
-    initializeToggleButton(".toggle-button2", displayDestinations2);
-});
-
-function initializeToggleButton(selector, displayFunction) {
-    var buttons = document.querySelectorAll(selector);
+    var buttons = document.querySelectorAll(".toggle-button");
 
     buttons.forEach(function (button) {
         button.addEventListener("click", function () {
             var category = this.getAttribute("data-category");
-            fetchDestinations(category, displayFunction);
-        });
-    });
-}
+            buttons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
 
-function fetchDestinations(category, displayFunction) {
-    clearDestinations(displayFunction); // Clear existing destinations for the specific set
-
+            this.classList.add("active");
             fetch("fetch_destinations.php", {
                 method: "POST",
                 headers: {
@@ -42,17 +28,19 @@ function fetchDestinations(category, displayFunction) {
             });
         });
     });
+
+    // Trigger a click on the button associated with the "team" category after setting up the event listeners
+    var teamButton = document.querySelector('[data-category="team"]');
+    if (teamButton) {
+        teamButton.click();
+    }
 });
 
-function clearDestinations(displayFunction) {
-    if (displayFunction === displayDestinations) {
-        document.querySelector(".cards").innerHTML = '';
-    } else if (displayFunction === displayDestinations2) {
-        document.querySelector(".destination-cards").innerHTML = '';
-    }
+function clearDestinations() {
+    document.querySelector(".cards").innerHTML = ''; // Clear existing destinations
 }
 
-function displayDestinationCard(destination, destinationClass) {
+function displayDestinationCard(destination) {
     var imageUrl = destination.image_url !== '' ? './photos/' + destination.image_url : './photos/default_image.jpg';
     var city = destination.city;
     var price = destination.price;
@@ -65,7 +53,7 @@ function displayDestinationCard(destination, destinationClass) {
     var residenceTimeInNights = residenceTimeInDays - 1;
 
     var cardHtml = `
-        <div class="${destinationClass}">
+        <div class="card">
             <div class="card-pic">
                 <img class="img1" src="${imageUrl}" alt="pic of the sea">
                 <p>${new Date(destination.start_date).toLocaleDateString()}</p>
@@ -82,35 +70,9 @@ function displayDestinationCard(destination, destinationClass) {
     document.querySelector(".cards").insertAdjacentHTML('beforeend', cardHtml);
 }
 
-function displayDestinationCard2(destination) {
-    var imageUrl = destination.image_url !== '' ? './photos/' + destination.image_url : './photos/default_image.jpg';
-    var city = destination.city;
-
-    var cardHtml = `
-        <a class="card-destination" href="product.php">
-            <span class="photos-destination">
-                <img src="${imageUrl}" alt="Image of ${city}">
-                ${city}
-            </span>
-            <span class="photos-destination2">
-                <img src="photos/Location.svg" alt="Location icon">
-                ${destination.country}
-            </span>
-        </a>
-    `;
-
-    document.querySelector(".destination-cards").insertAdjacentHTML('beforeend', cardHtml);
-}
-
 function displayDestinations(destinations) {
     destinations.forEach(function (destination) {
-        displayDestinationCard(destination, "card");
-    });
-}
-
-function displayDestinations2(destinations) {
-    destinations.forEach(function (destination) {
-        displayDestinationCard2(destination);
+        displayDestinationCard(destination);
     });
 }
 
