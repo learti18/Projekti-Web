@@ -105,7 +105,6 @@ $contacts = $contact->getMessages();
                             </div>
                         </section>
 
-                        <script src="category.js"></script>
 
 
 
@@ -206,7 +205,7 @@ $contacts = $contact->getMessages();
             </div>
         </section>
  <!-- ------Recommended Destination----- -->
-        <section class="destination-section">
+        <!-- <section class="destination-section">
             <div class="destination-title">
             <h2>Recommended Destination</h2>
             </div>
@@ -235,11 +234,36 @@ $contacts = $contact->getMessages();
                 <span class="photos-destination2"><img src="photos/Location.svg" >Combodia</span>
             </a>
             </div>
+        </section> -->
+            <section class="destination-section">
+            <div class="destination-title">
+                <h2>Recommended Destination</h2>
+            </div>
+            <div class="destination">
+                <!-- Add category buttons dynamically using PHP -->
+                <?php
+                    include_once './repository/repositoryDestinations.php';
+                    $repositoryDestinations = new respositoryDestinations();
+                    $categories2 = $repositoryDestinations->getAllCategories1();
+                    $categoryValues2 = array_values($categories2);
+                        foreach ($categoryValues2 as $category) {
+                                        echo '<button class="toggle-button2 destination-buttons" type="button" data-category="' . $category . '">' . ucfirst($category) . '</button>';
+                                    }
+                                ?>
+            </div>
 
+            <div class="destination" id="categoryButtons">
+                <!-- Category buttons will be dynamically added here using JavaScript -->
+            </div>
 
-
-
+            <div class="destination-cards" id="destinationCards">
+                <!-- Display destinations dynamically using JavaScript -->
+            </div>
         </section>
+
+
+
+
 <!-------Review section------>     
         <section class="review-section">
             <div class="review-cards">
@@ -284,8 +308,8 @@ $contacts = $contact->getMessages();
         <!-------footer section------> 
         <?php include "footer.php"; ?>
     
-    <script src="travelingWeb.js">
+    <script src="travelingWeb.js"></script>
+    <script src="category.js"></script>
 
-    </script>
 </body>
 </html>
