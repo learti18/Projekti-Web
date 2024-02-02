@@ -166,47 +166,8 @@ class respositoryDestinations{
     
         return $destinations;
     }
-    public function getAllCategories1() {
-        $allowedCategories = ['adventure', 'popular', 'beach'];
-
-        $allowedCategoriesStr = implode("','", $allowedCategories);
     
-        $sql = "SELECT DISTINCT category FROM destinations WHERE category IN ('$allowedCategoriesStr')";
-        $result = $this->connection->query($sql);
     
-        $categories = array();
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            $categories[] = $row['category'];
-        }
-    
-        return $categories;
-    
-    }
-    public function getDestinationsWithImagesByCategory1($category) {
-        $allowedCategories = ['adventure', 'popular', 'beach'];
-    
-        // Check if the provided category is allowed
-        if (!in_array($category, $allowedCategories)) {
-            return [];
-        }
-    
-        $allowedCategoriesStr = implode("','", $allowedCategories);
-    
-        $sql = "SELECT destinations.*, destination_images.image_url 
-                FROM destinations
-                LEFT JOIN destination_images ON destinations.destination_id = destination_images.destination_id
-                WHERE destinations.category = '$category'
-                AND destinations.category IN ('$allowedCategoriesStr')";
-    
-        $stmt = $this->connection->prepare($sql);
-        $stmt->execute();
-    
-        $destinations = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        return $destinations;
-    }
-    
- 
     }
     
 
