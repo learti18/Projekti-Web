@@ -191,11 +191,17 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-.toggle-button:not(.active):hover {
+/* .toggle-button:not(.active):hover {
   background-color: #eaeffd !important;
   transition: 0.5s !important;
+} */
+.toggle-button.active {
+  background-color: var(--Blue-primary, #3e86f5);
+  color: #fff;
 }
-
+.toggle-button.active:hover {
+  background-color: var(--Blue-primary, #2b75e4);
+}
 .cards {
   display: flex;
   flex-direction: row;
@@ -215,14 +221,15 @@ h2 {
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
   border-radius: 50px;
 }
-.img1{
-  width:80%;
-  border-radius: 25px;
+.img1 {
+  width: 290px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 50px;
 }
 .card-pic {
   display: flex;
   flex-direction: row;
- 
 }
 .card-pic p {
   text-align: center;
@@ -504,6 +511,7 @@ h2 {
   max-width: 1000px;
   column-gap: 2em;
   box-sizing: border-box;
+  transition: transform 0.5s ease-in-out;
 }
 .review-card {
   position: relative;
@@ -512,11 +520,23 @@ h2 {
   margin: 0 auto;
   line-height: 2;
   width: 50%;
+  height: 450px;
   max-width: 500px;
   background-color: white;
   border-radius: 50px;
   color: #000;
   font-size: 1.25rem;
+  /* flex: 0 0 auto; */
+  width: 50%; /* Display 2 cards at a time */
+  box-sizing: border-box;
+  display: none;
+  align-items: center;
+}
+.review-card-hidden {
+  display: none;
+}
+.review-card p {
+  font-size: 1.2rem;
 }
 .author {
   color: var(--Blue-primary, #3e86f5);
@@ -555,19 +575,20 @@ h2 {
 .arrow-slider {
   column-gap: 2em;
   display: flex;
-  flex-direction: row;
   padding-top: 50px;
 }
 .slider-button {
   border: 2px #3e87f594 solid;
   border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
+  font-size: 2rem;
+  color: var(--Blue-primary, #3e86f5);
+  padding: 0 12px;
   cursor: pointer;
+  transition: 200ms;
 }
-
+.slider-button:hover {
+  scale: 1.05;
+}
 /* ------discount-section------ */
 .discount-section {
   padding-top: 50px;
@@ -600,8 +621,11 @@ h2 {
   border-radius: 15px;
   padding: 15px 22px;
   text-decoration: none;
+  transition: 200ms;
 }
-
+.register-button:hover {
+  background-color: #eff3fe;
+}
 /* BREAKPOINTS */
 @media (max-width: 1200px) {
   .cards,
@@ -668,9 +692,6 @@ h2 {
   }
   .review-card {
     width: 100%;
-  }
-  .review-card2 {
-    display: none;
   }
 }
 @media (max-width: 390px) {

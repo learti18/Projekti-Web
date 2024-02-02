@@ -14,7 +14,7 @@
 <!-- Sidebar navigation links -->        
         <ul class="sidebar">
             <li><a href="about-us.php">ABOUT</a></li>
-            <li><a href="Accommodation.php">DESTINATIONS</a></li>
+            <li><a href="reviews.php">REVIEW</a></li>
             <?php
                 if(isset($_SESSION["userid"]) && $_SESSION["role"] == "admin"){
             ?>
@@ -32,8 +32,8 @@
 // Display login and registration links if the user is not logged in                
                 else{
             ?>       
-                <li><a href="login.php">LOGIN</a></li>     
-                <li><a href="register.php" class="active">REGISTER</a></li>
+                <li><a href="Accommodation.php">DESTINATIONS</a></li>   
+                <li><a href="login.php" class="active">LOGIN</a></li>
             <?php 
                 }
             ?>
