@@ -79,7 +79,7 @@ function displayDestinationCard2(destination) {
     var cardHtml = `
         <a class="card-destination" href="product.php">
             <span class="photos-destination">
-                <img src="${imageUrl}" alt="Image of ${city}">
+                <img class='img2' src="${imageUrl}" alt="Image of ${city}">
                 ${city}
             </span>
             <span class="photos-destination2">
