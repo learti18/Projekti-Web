@@ -83,7 +83,7 @@ $contacts = $contact->getMessages();
             <div class="destination" id="categoryButtons">
                 <button class="recommended-toggle rec-active" data-category="popular">Popular</button>
                 <button class="recommended-toggle" data-category="beach">Beach</button>
-                <button class="recommended-toggle" data-category="mountain">Mountain</button>
+                <button class="recommended-toggle" data-category="adventure">Adventure</button>
             </div>
 
             <div class="destination-cards" id="destinationCards">

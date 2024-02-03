@@ -70,7 +70,8 @@ function clearDestinations() {
 }
 
 function displayDestinationCard(destination) {
-    let imageUrl = destination.first_image_url !== './photos/' ? destination.first_image_url : './photos/default_image.jpg';
+    // Remove the "../" from the beginning of the path
+    let imageUrl = destination.first_image_url ? destination.first_image_url.replace(/^\.\.\//, '') : './photos/default_image.jpg';
     let city = destination.city;
     let price = destination.price;
     let startDate = new Date(destination.start_date);
@@ -84,7 +85,7 @@ function displayDestinationCard(destination) {
                 <img class="img1" src="${imageUrl}" alt="pic of the sea">
                 <p>${new Date(destination.start_date).toLocaleDateString()}</p>
             </div>
-            <p class="residence-time"><span>${destination.category}</span> ${durationDays} Days, ${durationNights}Nights</p>
+            <p class="residence-time"><span>${destination.category}</span> ${durationDays} Days, ${durationNights} Nights</p>
             <h3 class="destination-title1">${city}</h3>
             <div class="book-section">
                 <p><span class="price">${price}$</span>/Person</p>
@@ -95,6 +96,7 @@ function displayDestinationCard(destination) {
 
     document.querySelector(".cards").insertAdjacentHTML('beforeend', cardHtml);
 }
+
 
 function displayDestinations(response) {
     // Check if the 'data' property exists in the response and is an array
@@ -176,7 +178,7 @@ function clearRecommendedDestinations() {
 }
 
 function displayRecommendedDestinationCard(destination) {
-    let imageUrl = destination.first_image_url !== './photos/' ?  destination.first_image_url : './photos/default_image.jpg';
+    let imageUrl = destination.first_image_url ? destination.first_image_url.replace(/^\.\.\//, '') : './photos/default_image.jpg';
 
     let cardHtml = `
         <a class="card-destination" href="product.php?id=${destination.destination_id}">
