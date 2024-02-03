@@ -46,121 +46,6 @@ body {
   height: 250px;
 }
 
-/* -------search-bar------ */
-
-/* .header-search{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    border-radius: 20px 20px 0px 0px;
-    background: var(--White-primary, #FFF) !important;
-    gap: 1rem;
-    padding: 10px;
- }
-.header-search button{
-    border: none;
-    background: none;
-    margin: 0;
-    padding: 0;
-    color: var(--Black-primary, #000);
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
- }
-.A{
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    color: #fff; 
-    padding: 10px 20px;
-    border-radius: 25px;
-    background: rgba(62, 134, 245, 0.20);
- }
- 
-.B{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 20px;  
- }
- .all2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-
- }
-
- .All{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
- }
-
-.search{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;   
-    border-radius: 0px 50px 50px 50px;
-    background: var(--White-primary, #FFF) !important;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
-    width: 1028px;
-    height: 120px;
-    gap: 30px;
- }
-.leaving-from{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 25px; 
-    border: 2px solid rgba(172, 172, 172, 0.50);
-    padding: 30px 30px 30px 30px;  
- }
-.Where{
-    color: var(--Black-75, rgba(0, 0, 0, 0.50));
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 500; 
- }
-.City{
-    color: var(--Black-primary, #000);
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 500;
-    padding-top: 10px;
- }
-.img3{
-    padding-left: 10px;
-    padding-right: 20px;
-    padding-top: 20px;
-}
-.img4{
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 20px;
-}
-.C{
-    border: none;
-    background: none;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-}
-.C img{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 130px;
-    height: 13tpx;
-} */
-
 /* ------Special upcoming offers----- */
 .offers-section {
   padding: 100px 0;
@@ -303,7 +188,6 @@ h2 {
   width: 50%;
   flex-grow: 1;
 }
-
 .F {
   color: var(--Black-75, rgba(0, 0, 0, 0.5));
   font-size: 1.125rem;
@@ -337,79 +221,42 @@ h2 {
   width: 50%;
   max-width: 450px;
 }
-.TURISTS {
+.DESTINATIONS,
+.TURISTS,
+.HOTEL {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  top: 50%;
   align-items: center;
-  left: -60px;
-  width: 120px;
-  height: 80px;
-  border-radius: 35px;
   background: var(--White-primary, #fff);
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-  margin-left: 20px;
+  border-radius: 30px;
+  padding: 1em 2em;
 }
+.TURISTS {
+  top: 50%;
+  left: -35px;
+}
+.DESTINATIONS {
+  top: 20%;
+  right: -35px;
+}
+.HOTEL {
+  top: 70%;
+  right: -35px;
+}
+#span5,
+#span3,
 #span1 {
   color: var(--Blue-primary, #3e86f5) !important;
   font-size: 1.25rem;
   font-weight: 600;
 }
+#span6,
+#span4,
 #span2 {
   color: #000;
   font-size: 0.81rem;
-  font-weight: 300;
-}
-.DESTINATIONS {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  top: 20%;
-  align-items: center;
-  right: -60px;
-  width: 120px;
-  height: 80px;
-  border-radius: 35px;
-  background: var(--White-primary, #fff);
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-  margin-right: 20px;
-}
-#span5 {
-  color: var(--Blue-primary, #3e86f5) !important;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-#span6 {
-  color: #000;
-  font-size: 0.81rem;
-  font-weight: 300;
-}
-.HOTEL {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  top: 70%;
-  align-items: center;
-  right: -60px;
-  width: 120px;
-  height: 80px;
-  border-radius: 35px;
-  background: var(--White-primary, #fff);
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-  margin-right: 20px;
-}
-#span3 {
-  color: var(--Blue-primary, #3e86f5);
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-#span4 {
-  color: #000;
-  font-size: 13px;
   font-weight: 300;
 }
 /* ------Recommended Destination-----  */
@@ -426,6 +273,10 @@ h2 {
 .destination-title {
   text-align: center;
 }
+.destination {
+  display: flex;
+  margin: 30px 0;
+}
 .rec-active {
   border-radius: 10px;
   background-color: #fff !important;
@@ -436,17 +287,13 @@ h2 {
   border: none;
   background-color: #f7f7f7;
   color: var(--Black-75, rgba(0, 0, 0, 0.5));
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: normal;
   cursor: pointer;
-  margin-left: 10px;
-  margin-top: -50px;
-  border: none;
-  width: 120px;
-  height: 50px;
+  padding: 0.7em 1.3em;
+}
+.recommended-toggle:hover {
+  color: var(--Blue-primary, #3e86f5);
 }
 
 .destination-cards {
@@ -473,6 +320,10 @@ h2 {
 }
 
 .photos-destination img {
+  width: 260px;
+  height: 200px;
+  border-radius: 15px;
+  margin-bottom: 15px;
   width: 260px;
   height: 200px;
   border-radius: 15px;
@@ -526,9 +377,7 @@ h2 {
   border-radius: 50px;
   color: #000;
   font-size: 1.25rem;
-  /* flex: 0 0 auto; */
-  width: 50%; /* Display 2 cards at a time */
-  box-sizing: border-box;
+  width: 50%;
   display: none;
   align-items: center;
 }
@@ -592,6 +441,7 @@ h2 {
 /* ------discount-section------ */
 .discount-section {
   padding-top: 50px;
+  padding-bottom: 80px;
 }
 .discount {
   display: flex;
@@ -671,7 +521,21 @@ h2 {
     font-size: 0.8rem;
   }
   /* Destination section */
-
+  .DESTINATIONS,
+  .TURISTS,
+  .HOTEL {
+    padding: 0.5em 0.8em;
+  }
+  #span5,
+  #span3,
+  #span1 {
+    font-size: 1rem;
+  }
+  #span6,
+  #span4,
+  #span2 {
+    font-size: 0.6rem;
+  }
   /* review section */
   .review-section {
     padding: 80px 20px;
@@ -700,5 +564,8 @@ h2 {
   }
   .Contact-button {
     width: 100%;
+  }
+  .recommended-toggle {
+    font-size: 0.9rem;
   }
 }

@@ -251,3 +251,27 @@ document.addEventListener('DOMContentLoaded', function() {
         return window.innerWidth <= 768; // Adjust the breakpoint as needed
     }
 });
+
+
+
+//navbar
+const menuBtn = document.querySelector(".menu-btn")
+            const barsLogo = document.querySelector(".bx-menu")
+            const xLogo = document.querySelector(".bx-x")
+            const sideBar = document.querySelector(".sidebar")
+            const nav = document.querySelector("nav")
+            const logo =document.querySelector(".logo a")
+
+            let isSidebarActive = false;
+
+            menuBtn.addEventListener("click",function(){
+            // Toggle sidebar visibility
+                isSidebarActive = !isSidebarActive
+                isSidebarActive ? sideBar.style = "display:flex" : sideBar.style = "display:none"
+            // Toggle background color and logo color based on sidebar state
+                isSidebarActive ? nav.style = "background: #fff" : nav.style = "background: none";
+                isSidebarActive ? logo.style = "color:#3E86F5;" : logo.style = "color:#fff"
+            // Toggle menu icons
+                isSidebarActive ? barsLogo.style = "display:none" : barsLogo.style = "display: flex"
+                isSidebarActive ? xLogo.style = "display:flex" : xLogo.style = "display: none"
+            })
