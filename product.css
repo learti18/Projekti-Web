@@ -13,35 +13,33 @@ nav {
 .logo {
   font-size: 2em;
 }
-.dest-pic1 {
-  grid-area: firstpic;
-}
-.dest-pic2 {
-  grid-area: secondpic;
-}
-
-.dest-pic3 {
-  grid-area: thirdpic;
-}
-.product-images img {
-  width: 100%;
-  border-radius: 3px;
-  aspect-ratio: 16/9;
-  display: block;
-  cursor: pointer;
-}
-
 .product-images {
-  width: 100%;
-  grid-gap: 0.5em;
   display: grid;
-  grid-template-areas:
-    "firstpic secondpic"
-    "firstpic thirdpic";
-
-  grid-template-columns: 1fr 32.7%;
-  max-width: 1400px;
+  grid-template-columns: 60% 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.bigImage {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  max-height: 650px;
+  object-fit: cover;
+}
+.smallImages {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.smallImage {
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
 }
 .product-section {
   background-color: #ffff;
@@ -73,10 +71,9 @@ nav {
   height: 100%;
   object-fit: contain;
 }
-.large-image img{
+.large-image img {
   width: 100%;
   height: 500px;
-
 }
 .arrow {
   position: absolute;
@@ -192,7 +189,7 @@ nav {
   display: flex;
   flex-direction: row;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .main {
     flex-direction: column;
     gap: 20px;
@@ -203,17 +200,14 @@ nav {
   .location-section {
     width: 100%;
   }
-  .dest-pic2 {
+  .dest-pic {
+    grid-template-columns: 1fr;
+  }
+  .smallImages {
     display: none;
   }
-  .dest-pic3 {
-    display: none;
-  }
-  .dest-pic1 {
-    width: 100%;
-  }
-  .product-images {
-    display: flex;
+  .bigImage {
+    grid-column: 1 / -1;
   }
 }
 @media (max-width: 390px) {

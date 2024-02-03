@@ -66,8 +66,25 @@ class respositoryDestinations{
 
         return $destinations;
     }
-
+    function getDestinationById($id){
+        $conn = $this->connection;
     
+        $stm = $conn->prepare("SELECT * FROM destinations WHERE destination_id = ? LIMIT 1");
+        $stm->execute(array($id));
+    
+        $destinationDetails = $stm->fetch(PDO::FETCH_ASSOC);
+    
+        return $destinationDetails;
+    }
+    function getDestinationImagesById($id){
+        $conn = $this->connection;
+
+        $sql = "SELECT image_url FROM destination_images WHERE destination_id = '$id'";
+
+        $statement = $conn->query($sql);
+        $images = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $images;
+    }
     function updateDestinations($destination_id, $city, $country, $category, $start_date, $end_date, $description, $price)
     {
         $conn = $this->connection;

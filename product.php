@@ -5,7 +5,8 @@
         $destination_id = $_GET['id'];
 
         $repositoryDestinations = new respositoryDestinations();
-        $destinationDetails = $repositoryDestinations->getDestinationsById($destination_id);
+        $destinationDetails = $repositoryDestinations->getDestinationById($destination_id);
+        $images = $repositoryDestinations->getDestinationImagesById($destination_id);
     }
     ?>
 
@@ -24,24 +25,40 @@
  <?php include("header.php") ?>
 
      <section>
-         <div class="popup">
-             <div class="img">
-                 <img alt="destination img" class="large-image">
+        <div class="product-section">
+        <div class="product-images">
+            <!-- Big Image -->
+            <img class="bigImage" src="<?php echo $images[0]['image_url']; ?>" alt="Big Image">
 
-                 <button class="arrow btn-right"><svg xmlns="http://www.w3.org/2000/svg" height="54" viewBox="0 -960 960 960" width="54">
-                         <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                     </svg>
-                 </button>
-                 <button class="arrow btn-left"><svg xmlns="http://www.w3.org/2000/svg" height="54" viewBox="0 -960 960 960" width="54">
-                         <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
-                     </svg>
-                 </button>
-             </div>
-             <button id="close-btn"><svg xmlns="http://www.w3.org/2000/svg" height="35  " viewBox="0 -960 960 960" width="35">
-                     <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                 </svg>
-             </button>
-         </div>
+            <!-- Small Images -->
+            <div class="smallImages">
+                <?php for ($i = 1; $i < count($images); $i++): ?>
+                    <img class="smallImage" src="<?php echo $images[$i]['image_url']; ?>" alt="Small Image <?php echo $i; ?>">
+                <?php endfor; ?>
+            </div>
+        </div>
+        </div>
+            <div class="popup">
+                <div class="img">
+                    <img alt="destination img" class="large-image">
+
+                    <button class="arrow btn-right" onclick="navigate('next')">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="54" viewBox="0 -960 960 960" width="54">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                        </svg>
+                    </button>
+                    <button class="arrow btn-left" onclick="navigate('prev')">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="54" viewBox="0 -960 960 960" width="54">
+                            <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+                        </svg>
+                    </button>
+                </div>
+                <button id="close-btn" onclick="closePopup()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+            </div>
          <div class="main">
              <div class="product-description">
                  <h1><?php echo $destinationDetails['city']; ?></h1>
@@ -54,9 +71,9 @@
                      <span>4.5 (1200 Reviews)</span>
                  </div>
 
-                 <span class="large-image">
+                 <!-- <span class="large-image">
                      <img  src="./photos/<?php echo $destinationDetails['image_url']; ?>" />
-                 </span>
+                 </span> -->
 
                  <div class="overview-section">
                      <div class="overview-text">
@@ -100,48 +117,56 @@
 
      <?php include "footer.php";  ?>
      <script>
-        
-         const images = document.querySelectorAll(".smallImage"); // Ensure you have elements with this class
-         const largeImage = document.querySelector(".large-image");
-         const popup = document.querySelector(".popup");
-         const rightArrow = document.querySelector(".btn-right");
-         const leftArrow = document.querySelector(".btn-left");
-         const closeBtn = document.getElementById("close-btn");
+    const images = document.querySelectorAll(".smallImage");
+    const bigImage = document.querySelector(".bigImage");
+    const largeImage = document.querySelector(".large-image");
+    const popup = document.querySelector(".popup");
+    const closeBtn = document.getElementById("close-btn");
+    const rightArrow = document.querySelector(".btn-right");
+    const leftArrow = document.querySelector(".btn-left");
+    let index = 0;
 
-         let index = 0;
+    function updateImage(imageUrl) {
+        largeImage.src = imageUrl;
+    }
 
-         function updateImage(i) {
-             let path = `photos/destination${i + 1}.jpg`;
-             largeImage.src = path;
-         }
+    function openPopup(imageUrl, clickedIndex) {
+        popup.style.display = "flex";
+        updateImage(imageUrl);
+        index = clickedIndex;
+    }
 
-         // Ensure images exist before attaching event listeners
-         for (let i = 0; i < images.length; i++) {
-             images[i].addEventListener("click", function() {
-                 popup.style.display = "flex";
-                 updateImage(i);
-             });
-         }
+    function closePopup() {
+        popup.style.display = "none";
+    }
 
+    function navigate(direction) {
+        if (direction === 'next') {
+            index = (index + 1) % images.length;
+        } else if (direction === 'prev') {
+            index = (index - 1 + images.length) % images.length;
+        }
+        const imageUrl = images[index].src;
+        updateImage(imageUrl);
+    }
 
-         const menuBtn = document.querySelector(".menu-btn")
-         const barsLogo = document.querySelector(".bx-menu")
-         const xLogo = document.querySelector(".bx-x")
-         const sideBar = document.querySelector(".sidebar")
-         const nav = document.querySelector("nav")
-         const logo = document.querySelector(".logo a")
+    // Ensure images exist before attaching event listeners
+    images.forEach(function (image, i) {
+        image.addEventListener("click", function () {
+            openPopup(this.src, i);
+        });
+    });
 
-         let isSidebarActive = false;
+    // Click event for bigImage
+    bigImage.addEventListener("click", function () {
+        openPopup(this.src, index);
+    });
 
-         menuBtn.addEventListener("click", function() {
-             isSidebarActive = !isSidebarActive
-             isSidebarActive ? sideBar.style = "display:flex" : sideBar.style = "display:none"
-             isSidebarActive ? nav.style = "background: #fff" : nav.style = "background: linear-gradient(180deg,  #3E86F5 0%, #6ea4ef 100%)";
-             isSidebarActive ? logo.style = "color:#3E86F5;" : logo.style = "color:#fff"
-             isSidebarActive ? barsLogo.style = "display:none" : barsLogo.style = "display: flex"
-             isSidebarActive ? xLogo.style = "display:flex" : xLogo.style = "display: none"
-         })
-     </script>
+    closeBtn.addEventListener("click", closePopup);
+    rightArrow.addEventListener("click", function () { navigate('next') });
+    leftArrow.addEventListener("click", function () { navigate('prev') });
+</script>
+
  </body>
 
  </html>

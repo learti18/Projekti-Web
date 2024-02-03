@@ -31,6 +31,7 @@
             $country=$destination['country'];
             $description = $destination['description'];
             $price = $destination['price'];
+            $id = $destination['destination_id'];
         ?>
 
             <div class="hotels">
@@ -57,12 +58,12 @@
                         </div>
 
                         <div class="description-2">
-                            <p><?php echo $description; ?></p>
+                            <span><?php echo $description; ?></span>
                         </div>
                         
                     </div>
                     <div class="booking">
-                        <div><a class="book" href="product.php">BOOK</a></div>
+                        <div><a class="book" href="product.php?id=<?php echo $id ?>">BOOK</a></div>
                         <div class="price">
                             <span id="price2">$<?php echo $price; ?></span>
                         </div>

@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var buttons = document.querySelectorAll(".toggle-button");
     var currentCategory = "team"; // Set the default category to "team"
 
-    // Add 'active' class to the button corresponding to the default category
     var defaultButton = document.querySelector('.toggle-button[data-category="' + currentCategory + '"]');
     if (defaultButton) {
         defaultButton.classList.add("activebtn");
@@ -41,10 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         console.log("Initial fetch for category:", currentCategory);
         handleCategoryChange(currentCategory);
-    }, 100); // Adjust the delay as needed (e.g., 1000 milliseconds = 1 second)
+    }, 100); 
 });
 
-// Rest of your code remains unchanged
 
 function fetchDestinations(category) {
     fetch("fetch_destinations.php", {
@@ -72,7 +70,7 @@ function clearDestinations() {
 }
 
 function displayDestinationCard(destination) {
-    let imageUrl = destination.first_image_url !== '' ? './photos/' + destination.first_image_url : './photos/default_image.jpg';
+    let imageUrl = destination.first_image_url !== '' ? destination.first_image_url : './photos/default_image.jpg';
     let city = destination.city;
     let price = destination.price;
     let startDate = new Date(destination.start_date);
@@ -164,7 +162,7 @@ function fetchRecommendedDestinations(category) {
         return response.json();
     })
     .then(function (data) {
-        clearRecommendedDestinations(); // Clear existing recommended destinations
+        clearRecommendedDestinations();
         displayRecommendedDestinations(data);
     })
     .catch(function (error) {
@@ -174,11 +172,11 @@ function fetchRecommendedDestinations(category) {
 
 function clearRecommendedDestinations() {
     console.log("Clearing existing recommended destinations.");
-    document.querySelector(".destination-cards").innerHTML = ''; // Clear existing recommended destinations
+    document.querySelector(".destination-cards").innerHTML = ''; 
 }
 
 function displayRecommendedDestinationCard(destination) {
-    let imageUrl = destination.first_image_url !== '' ? './photos/' + destination.first_image_url : './photos/default_image.jpg';
+    let imageUrl = destination.first_image_url !== '.' ?  destination.first_image_url : './photos/default_image.jpg';
 
     let cardHtml = `
         <a class="card-destination" href="product.php?id=${destination.destination_id}">
