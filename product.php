@@ -26,17 +26,19 @@
 
      <section>
         <div class="product-section">
+        <div class="product-section">
         <div class="product-images">
             <!-- Big Image -->
-            <img class="bigImage" src="<?php echo $images[0]['image_url']; ?>" alt="Big Image">
+            <img class="bigImage" src="<?php echo str_replace('../', './', $images[0]['image_url']); ?>" alt="Big Image">
 
             <!-- Small Images -->
             <div class="smallImages">
                 <?php for ($i = 1; $i < count($images); $i++): ?>
-                    <img class="smallImage" src="<?php echo $images[$i]['image_url']; ?>" alt="Small Image <?php echo $i; ?>">
+                    <img class="smallImage" src="<?php echo str_replace('../', './', $images[$i]['image_url']); ?>" alt="Small Image <?php echo $i; ?>">
                 <?php endfor; ?>
             </div>
         </div>
+    </div>
         </div>
             <div class="popup">
                 <div class="img">
