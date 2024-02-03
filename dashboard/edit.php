@@ -1,25 +1,25 @@
 <?php
-ob_start(); // Start output buffering
-
+ob_start(); 
+// Get destination ID from the URL
 $destination_id = isset($_GET['id']) ? $_GET['id'] : null;
 
     if ($destination_id === null) {
-            // Handle the case when 'id' is not set (redirect, display an error, etc.)
+           
             echo "Error: Destination ID is not set.";
-            exit; // Stop further execution
+            exit; 
         }
-
+            // Include destinations repository and get destination by ID
             include_once '../repository/repositoryDestinations.php';
             $repositoryDestinations = new respositoryDestinations();
             $destination = $repositoryDestinations->getDestinationsById($destination_id);
 
-    // Check if the destination is found
+   
     if ($destination === false) {
-            // Handle the case when destination is not found (redirect, display an error, etc.)
+           
             echo "Error: Destination not found for ID: $destination_id";
-            exit; // Stop further execution
+            exit; 
     }
-
+// Check if form is submitted for editing
     if (isset($_POST['editBtn'])) {
          require_once("../classes/DatabaseConnection.php");
 

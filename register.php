@@ -41,24 +41,31 @@
         </form>
     </div>
     <?php
+    //  PHP code for user registration 
         if(isset($_POST["submit"])){
+            
+            // Get user inputs from the form
             $email = $_POST["email"];
             $username = $_POST["username"];
             $password = $_POST["password"];
             $confirmPass = $_POST["confirmpass"];
             $role = $_POST["role"];
+
+            // Set default role if not provided
             if($role == null){
                 $role = "user";
             }
-            
+             // Include necessary PHP classes
             include "./classes/DatabaseConnection.php";
             include "./classes/User.php";
             include "./classes/UserValidator.php";
             include "./classes/UserManager.php";
-            
+
+            // Create a User object with form inputs
             $user = new User($email,$username,$password,$confirmPass,$role);
             $userManager = new UserManager();
 
+            // Signup the user using the UserManager
             $userManager->signupUser($user);
             header("location: login.php?error=none");
         }

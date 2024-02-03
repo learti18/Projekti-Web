@@ -42,125 +42,11 @@ body {
   font-size: 1.5rem;
 }
 .img2{
-  width: 350px;
-  height: 250px;
+  width: 290px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 50px;
 }
-
-/* -------search-bar------ */
-
-/* .header-search{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    border-radius: 20px 20px 0px 0px;
-    background: var(--White-primary, #FFF) !important;
-    gap: 1rem;
-    padding: 10px;
- }
-.header-search button{
-    border: none;
-    background: none;
-    margin: 0;
-    padding: 0;
-    color: var(--Black-primary, #000);
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
- }
-.A{
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    color: #fff; 
-    padding: 10px 20px;
-    border-radius: 25px;
-    background: rgba(62, 134, 245, 0.20);
- }
- 
-.B{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 20px;  
- }
- .all2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-
- }
-
- .All{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
- }
-
-.search{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;   
-    border-radius: 0px 50px 50px 50px;
-    background: var(--White-primary, #FFF) !important;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
-    width: 1028px;
-    height: 120px;
-    gap: 30px;
- }
-.leaving-from{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 25px; 
-    border: 2px solid rgba(172, 172, 172, 0.50);
-    padding: 30px 30px 30px 30px;  
- }
-.Where{
-    color: var(--Black-75, rgba(0, 0, 0, 0.50));
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 500; 
- }
-.City{
-    color: var(--Black-primary, #000);
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 500;
-    padding-top: 10px;
- }
-.img3{
-    padding-left: 10px;
-    padding-right: 20px;
-    padding-top: 20px;
-}
-.img4{
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 20px;
-}
-.C{
-    border: none;
-    background: none;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-}
-.C img{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 130px;
-    height: 13tpx;
-} */
-
 /* ------Special upcoming offers----- */
 .offers-section {
   padding: 100px 0;
@@ -195,10 +81,7 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-/* .toggle-button:not(.active):hover {
-  background-color: #eaeffd !important;
-  transition: 0.5s !important;
-} */
+
 .toggle-button.active {
   background-color: var(--Blue-primary, #3e86f5);
   color: #fff;

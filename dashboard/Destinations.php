@@ -17,6 +17,7 @@
 
         <main class="main-content">
             <table>
+                <!-- Table to display destination information -->
                 <thead>
                     <tr class="table">
                         <th>Id</th>
@@ -33,14 +34,14 @@
                     </tr>
                 </thead>
                 <tbody>
-            
+              <!-- Table body for destination data -->
                 <?php
                     include_once '../repository/repositoryDestinations.php';
-
+                // Create an instance of the destinations repository and get all the destrinations
                         $repositoryDestinations = new respositoryDestinations();
 
                         $destinations = $repositoryDestinations->getAllDestinations();
-
+                // Loop through each destination and display its information
                         foreach ($destinations as $destination) {
                             echo "
                                 <tr>
@@ -76,49 +77,3 @@
 </body>
 
 </html>
-<!-- // // Fetch and display images for the current destination
-                        // $images = $repositoryDestinations->getImagesForDestination($destination['destination_id']);
-
-                        // echo "<td>";
-                        // foreach ($images as $image) {
-                        //     $imageUrl = $image['image_url'];
-                        //     echo "<img src='/photos/" . urlencode($imageUrl) . "' alt='Destination Image'>";
-                        // }
-                        // echo "</td>"; -->
-
-
-
-
-                        <!-- <img src='../photos/destination1.jpg' alt='destination1.jpg'> -->
-                    <!-- <tr>
-                        <td><img src="https://via.placeholder.com/300x200" alt="Product Image"></td>
-                        <td>Product Name 1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                        <td>Category A</td>
-                        <td>$99.99</td>
-                        <td class="action-buttons">
-                          <a href="edit.php">  <button class="edit-btn">Edit</button></a>
-                            <button class="delete-btn">Delete</button>
-                        </td>
-                    </tr> -->
-                    <!-- <tr>
-                        <td><img src="https://via.placeholder.com/300x200" alt="Product Image"></td>
-                        <td>Product Name 2</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                        <td>Category B</td>
-                        <td>$149.99</td>
-                        <td class="action-buttons">
-                           <a href="edit.php"><button class="edit-btn">Edit</button></a> 
-                            <button class="delete-btn">Delete</button>
-                        </td>
-                    </tr>
-                    <tr> -->
-                    <!-- <td><img src="https://via.placeholder.com/300x200" alt="Product Image"></td>
-                        <td>Product Name 1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                        <td>Category A</td>
-                        <td>$99.99</td>
-                        <td class="action-buttons">
-                           <a href="edit.php"> <button class="edit-btn">Edit</button></a>
-                            <button class="delete-btn">Delete</button>
-                        </td> -->

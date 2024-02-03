@@ -40,25 +40,29 @@
 
     </div>
     <?php
+    // Check if the form is submitted
         if(isset($_POST["submit"])){
             $email = $_POST["email"];
             $username = $_POST["username"];
             $password = $_POST["password"];
             $confirmPass = $_POST["confirmpass"];
             $role = $_POST["role"];
+
+            // Set default role if not provided
             if($role == null){
                 $role = "user";
             }
-            
             include "../classes/DatabaseConnection.php";
             include "../classes/User.php";
             include "../classes/UserValidator.php";
             include "../classes/UserManager.php";
             
+            // Create User object and UserManager instance
             $user = new User($email,$username,$password,$confirmPass,$role);
             $userManager = new UserManager();
 
-            $userManager->signupUser($user);
+             // Sign up the user and redirect with an error message
+             $userManager->signupUser($user);
             header("location: users.php?error=none");
         }
     ?>

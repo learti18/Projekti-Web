@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    
+     <!-- Container for the login form -->
     <div class="container">
         <h1 class="logo"><a href="travelingWeb.php">Treloo</a></h1>
         <form method="post" action="login.php" onsubmit="validate()">
@@ -44,15 +44,18 @@
         include "./classes/Login.classes.php";
         include "./classes/LoginController.php";
 
+        // Check if the login form is submitted
         if(isset($_POST["login"])){
             $username = $_POST["username"];
             $password = $_POST["password"];
-            
+
+            // Create a LoginController object and perform user login
             $login = new LoginContr($username,$password);
             $login->loginUser();
             
             session_start();
-            
+
+            // Redirect based on user role
             if($_SESSION["role"] == "admin"){
                 header("location: dashboard/dashboard.php");
             }else{

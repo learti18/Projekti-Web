@@ -3,6 +3,8 @@ include_once '../repository/repositoryDestinations.php';
 include_once '../models/destinations.php';
 
 if(isset($_POST['insertbtn'])){
+    error_reporting(E_ALL);
+ini_set('display_errors', 1);
    
     if(empty($_POST['city']) || empty($_POST['country']) || empty($_POST['category']) ||
     empty($_POST['startDate']) || empty($_POST['endDate'])  || empty($_POST['description']) || empty($_POST['price'])){
@@ -17,8 +19,9 @@ if(isset($_POST['insertbtn'])){
                 $price= $_POST["price"];
                 $images=$_FILES["images"];
                 $destination_id = $city.rand(100,999);
-                $uploadDir = '../uploads/';
+                $uploadDir = './photos/';
                 $uploadedImageUrls = [];
+
         
                 foreach ($_FILES['images']['name'] as $key => $imageFilename) {
                     $imageFileError = $_FILES['images']['error'][$key];
@@ -49,7 +52,13 @@ if(isset($_POST['insertbtn'])){
                     $repositoryDestinations = new respositoryDestinations();
         
                     $repositoryDestinations->insertDestinations($destinations);
+
+                  
                 }
+                header("Location: ../dashboard/Destinations.php");
+                exit;
+
     }   
+    
 }
 ?> 

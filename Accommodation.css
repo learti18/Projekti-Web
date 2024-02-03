@@ -10,49 +10,14 @@ body {
 nav {
   background: linear-gradient(180deg, #3e86f5 0%, #6ea4ef 100%);
 }
-/* nav{
-    background: linear-gradient(180deg,  #3E86F5 0%, #6ea4ef 100%);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-}
-nav ul{
-    display: flex;
-    flex-direction: row;
-
-}
-nav ul li{
-    list-style: none;
-}
-nav ul li a{
-    border-radius:10px;
-    padding: 12px 22px;
-    color:#FFF;
-    text-decoration: none;
-}
-nav ul li a:hover{
-    
-    background-color:#FFF;
-    color: #3E86F5;
-    transition: 0.5s;
-
-}
-.logo{
-    text-decoration: none;
-    color:#FFF;
-    font-size: 30px;
-} */
-
-.Accommodation {
+/* .Accommodation {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 5rem;
-}
-.budget-section {
+} */
+/* .budget-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,14 +122,14 @@ nav ul li a:hover{
   padding-left: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: var(--Black-75, rgba(0, 0, 0, 0.5));
-}
+  color: var(--Black-75, rgba(0, 0, 0, 0.5)); */
+/* } */
 .hotels {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-  width: 100%;
+  width: 70%;
   border-radius: 15px;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
   background: #fff;
@@ -176,15 +141,11 @@ nav ul li a:hover{
   justify-content: center;
   align-self: flex-start;
 }
-.off {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.description {
+
+/* .description {
   display: flex;
   flex-direction: column;
-}
+} */
 .img1 {
   width: 50%;
   border-radius: 10px;
@@ -198,8 +159,8 @@ nav ul li a:hover{
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-left: 20%;
-  margin-right: 20%;
+  /* margin-left: 20%;
+  margin-right: 20%; */
 }
 #tittle {
   display: flex;
@@ -210,7 +171,7 @@ nav ul li a:hover{
   font-weight: 600;
   line-height: normal;
 }
-#receive-off {
+/* #receive-off {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,9 +186,9 @@ nav ul li a:hover{
   width: 100%;
   height: 40%;
   padding: 16px 8px;
-}
+} */
 .d {
-  color: #fff;
+  /* color: #fff; */
 }
 .Review-section {
   display: flex;
@@ -239,32 +200,34 @@ nav ul li a:hover{
   display: flex;
   flex-direction: row;
 }
-.description {
+.all-description {
   display: flex;
   flex-direction: column;
+  /* width: 100px; */
 }
 .description-1 {
   color: var(--Black-75, rgba(0, 0, 0, 1));
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
-  line-height: 140%;
+ 
   letter-spacing: 0.26px;
   padding-top: 20px;
+  
 }
 .description-2 {
-  width: 380px;
   color: var(--Black-75, rgba(0, 0, 0, 0.5));
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%;
+ 
   letter-spacing: 0.26px;
+  width: 10px;
 }
 .booking {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
   align-content: center;
   padding-top: 10%;
 }
@@ -275,7 +238,7 @@ nav ul li a:hover{
 }
 .book {
   text-decoration: none;
-  display: inline-flex;
+  /* display: inline-flex; */
   width: 100px;
   height: 40px;
   justify-content: center;
@@ -290,16 +253,7 @@ nav ul li a:hover{
   font-weight: 300;
 }
 
-#price1 {
-  color: var(--Red, #eb5757);
-  text-align: right;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.14px;
-  text-decoration-line: strikethrough;
-}
+
 #price2 {
   color: var(--Gray-1, #333);
   text-align: right;
@@ -308,84 +262,9 @@ nav ul li a:hover{
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.2px;
+  gap: 3rem;
 }
-/* .footer-links{
-    padding-top: 150px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.footer-links ul{
-    display: flex;
-    flex-direction: row;
-}
-.footer-links ul li{
-    list-style: none;
-}
-.footer-links ul li a{
-    padding: 10px 20px;
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.75);
-}
-.footer-links p{
-    color: var(--Black-75, rgba(0, 0, 0, 0.50));
-}
-.all-description{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%; /* Adjust this as needed 
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    display: none;  Initially hidden on larger screens 
-    color: #FFF;  Set the initial color 
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-nav ul li {
-    list-style: none;
-    margin-right: 20px;
-} */
-
 @media only screen and (max-width: 670px) {
-  .menu-icon {
-    display: block; /* Display on smaller screens */
-  }
-
-  nav ul {
-    display: none; /* Hide the menu initially */
-    flex-direction: column;
-    position: absolute;
-    top: 80px; /* Adjust as needed based on your layout */
-    left: 0;
-    width: 100%;
-    background-color: #6ea4ef;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-  }
-
-  nav ul li {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #6ea4ef;
-  }
-
-  nav ul li:last-child {
-    border-bottom: none;
-  }
-
-  .menu-icon {
-    color: #3e86f5; /* Change color when menu is open */
-  }
 
   .hotels {
     display: flex;
@@ -445,13 +324,6 @@ nav ul li {
     width: 100%;
   }
 }
-
-@media only screen and (max-width: 740px) {
-  nav ul li a {
-    padding: 8px;
-  }
-}
-
 @media only screen and (max-width: 548px) {
   .description-2 {
     letter-spacing: 0.8px;

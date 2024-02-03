@@ -43,3 +43,15 @@ menuBtn.addEventListener("click",function(){
     isSidebarActive ? barsLogo.style = "display:none" : barsLogo.style = "display: flex"
     isSidebarActive ? xLogo.style = "display:flex" : xLogo.style = "display: none"
 })
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const categoryButtons = document.querySelectorAll('.toggle-button');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const selectedCategory = button.dataset.category;
+            window.location.href = 'product.php?category=' + selectedCategory;
+        });
+    });
+});

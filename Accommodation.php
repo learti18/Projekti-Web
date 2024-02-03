@@ -53,16 +53,16 @@
                 </div>
                     <div class="description">
                         <div class="description-1">
-                            <span><?php echo $description; ?></span>
+                            <span><?php echo $country; ?></span>
                         </div>
 
                         <div class="description-2">
-                            <span><?php echo $country; ?></span>
+                            <span><?php echo $description; ?></span>
                         </div>
                         
                     </div>
                     <div class="booking">
-                        <div><a class="book" href="product.html">BOOK</a></div>
+                        <div><a class="book" href="product.php">BOOK</a></div>
                         <div class="price">
                             <span id="price2">$<?php echo $price; ?></span>
                         </div>
@@ -71,10 +71,6 @@
             </div>
 
         <?php } ?>
-
-
-
-        
 
 
          <?php include "footer.php"; ?> 
@@ -90,273 +86,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-<!-- 
-        <div class="hotels">
-            <img class="img1" src="photos/australia.svg" alt="">
-
-
-            <div class="all-description">
-                <div class="off">
-                    <div><span id="tittle"> Marineford Hotel</span></div>
-                </div>
-                <div class="Review-section">
-                    <div class="stars">
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 5.svg"></div>
-                    </div>
-                    <div>
-                        <span>4.5 (1200 Reviews)</span>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="description">
-                    <div class="description-1">
-                        <span>Live a little and celbrate with champagne</span>
-                    </div>
-                    <div>
-                        <span class="description-2">
-                            Reats include a glass of French champagne, parking and <br> a late checkout.
-                            Gym included. Flexible cancellation applies.
-                        </span>
-                    </div>
-
-                </div>
-                <div class="booking">
-                    <div><a class="book" href="product.html">BOOK</a></div>
-                    <div class="price">
-                        <span id="price1">$150</span>
-                        <span id="price2">$130</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-        <div class="hotels">
-            <img class="img1" src="photos/australia.svg" alt="">
-
-            <div class="all-description">
-                <div class="off">
-                    <div><span id="tittle">Aghnieim Scepter Hotel</span></div>
-                    <div> <span id="receive-off">Book now and receive 15% off</span></div> 
-                </div>
-                <div class="Review-section">
-                    <div class="stars">
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 5.svg"></div>
-                    </div>
-                    <div>
-                        <span>4.5 (1200 Reviews)</span>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="description">
-                    <div class="description-1">
-                        <span>Live a little and celbrate with champagne</span>
-                    </div>
-                    <div>
-                        <span class="description-2">
-                            Reats include a glass of French champagne, parking and <br> a late checkout.
-                            Gym included. Flexible cancellation applies.
-                        </span>
-                    </div>
-
-                </div>
-                <div class="booking">
-                    <div><a class="book" href="product.html">BOOK</a></div>
-                    <div class="price">
-                        <span id="price1">$150</span>
-                        <span id="price2">$130</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-        <div class="hotels">
-
-            <img class="img1" src="photos/australia.svg" alt="">
-
-
-            <div class="all-description">
-                <div class="off">
-                    <div><span id="tittle">Shanghai Open House</span></div>
-                </div>
-                <div class="Review-section">
-                    <div class="stars">
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 5.svg"></div>
-                    </div>
-                    <div>
-                        <span>4.5 (1200 Reviews)</span>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="description">
-                    <div class="description-1">
-                        <span>Live a little and celbrate with champagne</span>
-                    </div>
-                    <div>
-                        <span class="description-2">
-                            Reats include a glass of French champagne, parking and <br> a late checkout.
-                            Gym included. Flexible cancellation applies.
-                        </span>
-                    </div>
-
-                </div>
-                <div class="booking">
-                    <a class="book" href="product.html">BOOK</a>
-                    <div class="price">
-                        <span id="price1">$150</span>
-                        <span id="price2">$130</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-        <div class="hotels">
-            <img class="img1" src="photos/australia.svg" alt="">
-
-            <div class="all-description">
-                <div class="off">
-                    <div><span id="tittle">Ocean Waves Resort</span></div>
-                </div>
-                <div class="Review-section">
-                    <div class="stars">
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 5.svg"></div>
-                    </div>
-                    <div>
-                        <span>4.5 (1200 Reviews)</span>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="description">
-                    <div class="description-1">
-                        <span>Live a little and celbrate with champagne</span>
-                    </div>
-                    <div>
-                        <span class="description-2">
-                            Reats include a glass of French champagne, parking and <br> a late checkout.
-                            Gym included. Flexible cancellation applies.
-                        </span>
-                    </div>
-
-                </div>
-                <div class="booking">
-                    <div><a class="book" href="product.html">BOOK</a></div>
-                    <div class="price">
-                        <span id="price1">$150</span>
-                        <span id="price2">$130</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-        <div class="hotels">
-            <img class="img1" src="photos/australia.svg" alt="">
-
-
-            <div class="all-description">
-                <div class="off">
-                    <div><span id="tittle">Maimi City frontier</span></div>
-                    <div> <span></span></div>
-                </div>
-                <div class="Review-section">
-                    <div class="stars">
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 1.svg"></div>
-                        <div><img src="photos/star-s-fill 5.svg"></div>
-                    </div>
-                    <div>
-                        <span>4.5 (1200 Reviews)</span>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="description">
-                    <div class="description-1">
-                        <span>Live a little and celbrate with champagne</span>
-                    </div>
-                    <div>
-                        <span class="description-2">
-                            Reats include a glass of French champagne, parking and <br> a late checkout.
-                            Gym included. Flexible cancellation applies.
-                        </span>
-                    </div>
-
-                </div>
-                <div class="booking">
-                    <div><a class="book" href="product.html">BOOK</a></div>
-                    <div class="price">
-                        <span id="price1">$150</span>
-                        <span id="price2">$130</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    </div>
-
-
-    <?php include "footer.php"; ?>
+    
 
    
 
