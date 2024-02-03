@@ -9,10 +9,10 @@ if (isset($_POST['category'])) {
 
     $repositoryDestinations = new respositoryDestinations();
 
-    // Assuming you have a method like getRecommendedDestinations
+   
     $recommendedDestinations = $repositoryDestinations->getRecommendedDestinations($category,4);
 
-    // Debugging statements
+   
     error_log("Category: " . $category);
     error_log("Recommended Destinations: " . json_encode($recommendedDestinations));
 
