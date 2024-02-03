@@ -19,100 +19,21 @@
                 destination in world with us</p>
         </div>
     </header>
-         <!-- -------search-bar------  -->
-   
-                    
-
-            <section class="offers-section">
-               <h2>Special Upcoming Offers</h2>
+     
+<!-- ----Offers-section----- -->
+        <section class="offers-section">
+            <h2>Special Upcoming Offers</h2>
                             
-                    <div class="offer-selector">
-                                <!-- Add category buttons dynamically using PHP -->
-                        <?php
-                                    include_once './repository/repositoryDestinations.php';
-                                    $repositoryDestinations = new respositoryDestinations();
-                                    $categories = $repositoryDestinations->getAllCategories();
-                                    $categoryValues = array_values($categories);
+            <div class="offer-selector">
+                <button class="toggle-button activebtn" data-category="team">Team</button>
+                <button class="toggle-button" data-category="couple">Couple</button>
+                <button class="toggle-button" data-category="family">Family</button>
+            </div>
 
-                                    foreach ($categoryValues as $category) {
-                                        echo '<button class="toggle-button" type="button" data-category="' . $category . '">' . ucfirst($category) . '</button>';
-                                    }
-                                ?>
-                        </div>
-
-                            <div class="cards">
-                                <!-- Display destinations dynamically using JavaScript -->
-                            </div>
-                        </section>
-
-                        <script src="category.js"></script>
-
-
-
-
-
-
-
-                   
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <!-- <div class="card-pic">
-                            <img src="photos/logasea.svg" alt="pic of the sea">
-                            <p>14 FEB 2022</p>
-                        </div>
-                        <p class="residence-time"><span>Relax</span> 3 Days, 3 Nights</p>
-                        <h3 class="destination-title1">Loga Sea</h3>
-                        <div class="book-section">
-                            <p><span class="price">700$</span>/Person</p>
-                            <a href="product.php" class="buttons">Book Now</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-pic">
-                            <img src="photos/ansgar.svg" alt="pic of ansgar">
-                            <p>18 JUN 2022</p>
-                        </div>
-                        <p class="residence-time"><span>Adventure</span> 4 Days, 3 Nights</p>
-                        <h3 class="destination-title1">Ansgar Scheffold</h3>
-                        <div class="book-section">
-                            <p><span class="price">400$</span>/Person</p>
-                            <a href="product.php" class="buttons">Book Now</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-pic">
-                            <img src="photos/lona.svg" alt="pic of lona">
-                            <p>22 DEC 2022</p>
-                        </div>
-                        <p class="residence-time"><span>Relax</span> 7 Days, 6 Nights</p>
-                        <h3 class="destination-title1">Lona X</h3>
-                        <div class="book-section">
-                            <p><span class="price">340$</span>/Person</p>
-                            <a href="product.php" class="buttons">Book Now</a>
-                        </div>
-                    </div>
-                </div>             -->
-        
+            <div class="cards">
+                <!-- Display destinations dynamically using JavaScript -->
+            </div>
+        </section>
 
 <!-- ----contact-section----- -->
         <section class="contact-section">
@@ -145,41 +66,22 @@
                 <a href="contact-us.php" class="Contact-button">Contact US</a> 
             </div>
         </section>
- <!-- ------Recommended Destination----- -->
-        <section class="destination-section">
+ <!-- ------Recommended Destinations----- -->
+            <section class="destination-section">
             <div class="destination-title">
-            <h2>Recommended Destination</h2>
+                <h2>Recommended Destination</h2>
+            </div>
+            <div class="destination" id="categoryButtons">
+                <button class="recommended-toggle rec-active" data-category="popular">Popular</button>
+                <button class="recommended-toggle" data-category="beach">Beach</button>
+                <button class="recommended-toggle" data-category="mountain">Mountain</button>
             </div>
 
-            <div class="destination">
-                <button class="Popular-button">Popular</button>
-                <button class="destination-buttons">Adventure</button>
-                <button class="destination-buttons">Beath</button>
+            <div class="destination-cards" id="destinationCards">
+                <!-- Display destinations dynamically using JavaScript -->
             </div>
-
-            <div class="destination-cards">
-            <a class="card-destination" href="product.php">
-                <span class="photos-destination"><img src="photos/destination1.svg" >Kina Mountain</span>
-                <span class="photos-destination2"> <img src="photos/Location.svg" >Combodia</span>
-            </a>
-            <a class="card-destination" href="product.php">
-                <span class="photos-destination"><img src="photos/destination2.svg" >Kina Mountain</span>
-                <span class="photos-destination2"><img src="photos/Location.svg" >Combodia</span>
-            </a>
-            <a class="card-destination" href="product.php">
-                <span class="photos-destination"><img src="photos/destination3.svg" >Kina Mountain </span>
-                <span class="photos-destination2"><img src="photos/Location.svg" >Combodia</span>
-            </a>
-            <a class="card-destination" href="product.php">
-                <span class="photos-destination"><img src="photos/destination4.svg" >Kina Mountain </span>
-                <span class="photos-destination2"><img src="photos/Location.svg" >Combodia</span>
-            </a>
-            </div>
-
-
-
-
         </section>
+
 <!-------Review section------>     
         <section class="review-section">
             <div class="review-cards">
@@ -218,7 +120,7 @@
             </div>
         </section>
 
-        <!-- DISCOUNT SECTION -->
+<!------ DISCOUNT SECTION ------->
         <section class="discount-section">
             <?php
                 if(!isset($_SESSION["userid"])){
@@ -240,11 +142,11 @@
             ?>
         </section>      
         
-        <!-------footer section------> 
+<!-------footer section------> 
         <?php include "footer.php"; ?>
     
-    <script src="travelingWeb.js">
-
-    </script>
+        <script src="category.js">
+            
+        </script>
 </body>
 </html>
