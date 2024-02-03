@@ -1,6 +1,6 @@
 <?php 
 include_once __DIR__ . '/../classes/DatabaseConnection.php';
-
+include_once __DIR__ . '/../models/destinations.php';
 
 class respositoryDestinations{
     private $connection;
@@ -143,7 +143,7 @@ class respositoryDestinations{
         return $categories;
     
     }
-    public function getDestinationsWithImagesByCategory($category) {
+    public function getDestinationsWithImagesByCategory($category,$limit) {
         $allowedCategories = ['team', 'couple', 'family'];
     
         // Check if the provided category is allowed
@@ -151,21 +151,48 @@ class respositoryDestinations{
             return [];
         }
     
-        $allowedCategoriesStr = implode("','", $allowedCategories);
-    
-        $sql = "SELECT destinations.*, destination_images.image_url 
-                FROM destinations
-                LEFT JOIN destination_images ON destinations.destination_id = destination_images.destination_id
-                WHERE destinations.category = '$category'
-                AND destinations.category IN ('$allowedCategoriesStr')";
+        $sql = "SELECT
+                    d.*,
+                    (SELECT image_url FROM destination_images di WHERE di.destination_id = d.destination_id ORDER BY di.image_id LIMIT 1) AS first_image_url
+                FROM destinations d
+                WHERE d.category = :category
+                AND d.category IN ('team', 'couple', 'family')
+                LIMIT $limit";
     
         $stmt = $this->connection->prepare($sql);
+        $stmt->bindParam(':category', $category, PDO::PARAM_STR);
         $stmt->execute();
     
         $destinations = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
         return $destinations;
     }
+    public function getRecommendedDestinations($category, $limit) {
+        $allowedCategories = ['adventure', 'popular', 'beach'];
+    
+        // Check if the provided category is allowed
+        if (!in_array($category, $allowedCategories)) {
+            return [];
+        }
+    
+        // Modify the SQL query based on your recommendation criteria
+        $sql = "SELECT
+                    d.*,
+                    (SELECT image_url FROM destination_images di WHERE di.destination_id = d.destination_id ORDER BY di.image_id LIMIT 1) AS first_image_url
+                FROM destinations d
+                WHERE d.category = :category
+                AND d.category IN ('adventure', 'popular', 'beach')
+                LIMIT $limit";
+    
+        $stmt = $this->connection->prepare($sql);
+        $stmt->bindParam(':category', $category, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $destinations = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $destinations;
+    }
+
     public function getAllCategories1() {
         $allowedCategories = ['adventure', 'popular', 'beach'];
 
@@ -182,32 +209,8 @@ class respositoryDestinations{
         return $categories;
     
     }
-    public function getDestinationsWithImagesByCategory1($category) {
-        $allowedCategories = ['adventure', 'popular', 'beach'];
     
-        // Check if the provided category is allowed
-        if (!in_array($category, $allowedCategories)) {
-            return [];
-        }
-    
-        $allowedCategoriesStr = implode("','", $allowedCategories);
-    
-        $sql = "SELECT destinations.*, destination_images.image_url 
-                FROM destinations
-                LEFT JOIN destination_images ON destinations.destination_id = destination_images.destination_id
-                WHERE destinations.category = '$category'
-                AND destinations.category IN ('$allowedCategoriesStr')";
-    
-        $stmt = $this->connection->prepare($sql);
-        $stmt->execute();
-    
-        $destinations = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        return $destinations;
-    }
-    
- 
-    }
+}
     
 
 

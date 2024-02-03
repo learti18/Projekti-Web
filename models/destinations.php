@@ -12,7 +12,7 @@ class destinations{
     private $images;
 
 
-    function __construct($destination_id,$images,$city,$country,$category,$start_date,$end_date,$description,$price){
+    function __construct($destination_id=null,$images=null,$city=null,$country=null,$category=null,$start_date=null,$end_date=null,$description=null,$price=null){
             $this->destination_id = $destination_id;
             $this->images = $images;
             $this->city = $city;

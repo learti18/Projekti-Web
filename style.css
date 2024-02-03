@@ -41,12 +41,11 @@ body {
 .text p {
   font-size: 1.5rem;
 }
-.img2{
-  width: 290px;
-  height: 270px;
-  object-fit: cover;
-  border-radius: 50px;
+.img2 {
+  width: 350px;
+  height: 250px;
 }
+
 /* ------Special upcoming offers----- */
 .offers-section {
   padding: 100px 0;
@@ -81,12 +80,11 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-
-.toggle-button.active {
+.activebtn {
   background-color: var(--Blue-primary, #3e86f5);
   color: #fff;
 }
-.toggle-button.active:hover {
+.toggle-button .activebtn:hover {
   background-color: var(--Blue-primary, #2b75e4);
 }
 .cards {
@@ -190,7 +188,6 @@ h2 {
   width: 50%;
   flex-grow: 1;
 }
-
 .F {
   color: var(--Black-75, rgba(0, 0, 0, 0.5));
   font-size: 1.125rem;
@@ -224,86 +221,50 @@ h2 {
   width: 50%;
   max-width: 450px;
 }
-.TURISTS {
+.DESTINATIONS,
+.TURISTS,
+.HOTEL {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  top: 50%;
   align-items: center;
-  left: -60px;
-  width: 120px;
-  height: 80px;
-  border-radius: 35px;
   background: var(--White-primary, #fff);
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-  margin-left: 20px;
+  border-radius: 30px;
+  padding: 1em 2em;
 }
+.TURISTS {
+  top: 50%;
+  left: -35px;
+}
+.DESTINATIONS {
+  top: 20%;
+  right: -35px;
+}
+.HOTEL {
+  top: 70%;
+  right: -35px;
+}
+#span5,
+#span3,
 #span1 {
   color: var(--Blue-primary, #3e86f5) !important;
   font-size: 1.25rem;
   font-weight: 600;
 }
+#span6,
+#span4,
 #span2 {
   color: #000;
   font-size: 0.81rem;
-  font-weight: 300;
-}
-.DESTINATIONS {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  top: 20%;
-  align-items: center;
-  right: -60px;
-  width: 120px;
-  height: 80px;
-  border-radius: 35px;
-  background: var(--White-primary, #fff);
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-  margin-right: 20px;
-}
-#span5 {
-  color: var(--Blue-primary, #3e86f5) !important;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-#span6 {
-  color: #000;
-  font-size: 0.81rem;
-  font-weight: 300;
-}
-.HOTEL {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  top: 70%;
-  align-items: center;
-  right: -60px;
-  width: 120px;
-  height: 80px;
-  border-radius: 35px;
-  background: var(--White-primary, #fff);
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-  margin-right: 20px;
-}
-#span3 {
-  color: var(--Blue-primary, #3e86f5);
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-#span4 {
-  color: #000;
-  font-size: 13px;
   font-weight: 300;
 }
 /* ------Recommended Destination-----  */
 
 .destination-section {
   display: flex;
-  padding: 100px 0;
+  padding-bottom: 40px;
+  padding-top: 80px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -312,30 +273,27 @@ h2 {
 .destination-title {
   text-align: center;
 }
-.Popular-button {
-  width: 100px;
-  border-radius: 10px;
-  background: white;
-  height: 50px;
-  color: var(--Blue-primary, #3e86f5) !important;
-  font-size: 18px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
+.destination {
+  display: flex;
+  margin: 30px 0;
 }
-.destination-buttons {
+.rec-active {
+  border-radius: 10px;
+  background-color: #fff !important;
+  color: var(--Blue-primary, #3e86f5) !important;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
+}
+.recommended-toggle {
   border: none;
   background-color: #f7f7f7;
   color: var(--Black-75, rgba(0, 0, 0, 0.5));
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: normal;
   cursor: pointer;
-  margin-left: 10px;
-  margin-top: -50px;
-  border: none;
+  padding: 0.7em 1.3em;
+}
+.recommended-toggle:hover {
+  color: var(--Blue-primary, #3e86f5);
 }
 
 .destination-cards {
@@ -362,8 +320,14 @@ h2 {
 }
 
 .photos-destination img {
-  width: 250px;
-  padding-bottom: 15px;
+  width: 260px;
+  height: 200px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  width: 260px;
+  height: 200px;
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 .photos-destination {
   display: flex;
@@ -386,7 +350,7 @@ h2 {
 
 /* ------Review Section-----  */
 .review-section {
-  padding: 100px 50px;
+  padding: 80px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -413,9 +377,7 @@ h2 {
   border-radius: 50px;
   color: #000;
   font-size: 1.25rem;
-  /* flex: 0 0 auto; */
-  width: 50%; /* Display 2 cards at a time */
-  box-sizing: border-box;
+  width: 50%;
   display: none;
   align-items: center;
 }
@@ -479,6 +441,7 @@ h2 {
 /* ------discount-section------ */
 .discount-section {
   padding-top: 50px;
+  padding-bottom: 80px;
 }
 .discount {
   display: flex;
@@ -558,7 +521,21 @@ h2 {
     font-size: 0.8rem;
   }
   /* Destination section */
-
+  .DESTINATIONS,
+  .TURISTS,
+  .HOTEL {
+    padding: 0.5em 0.8em;
+  }
+  #span5,
+  #span3,
+  #span1 {
+    font-size: 1rem;
+  }
+  #span6,
+  #span4,
+  #span2 {
+    font-size: 0.6rem;
+  }
   /* review section */
   .review-section {
     padding: 80px 20px;
@@ -587,5 +564,8 @@ h2 {
   }
   .Contact-button {
     width: 100%;
+  }
+  .recommended-toggle {
+    font-size: 0.9rem;
   }
 }
