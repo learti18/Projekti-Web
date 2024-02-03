@@ -72,7 +72,7 @@ $contacts = $contact->getMessages();
                     let’s find the best destination in world with us. 
                     <br>Would you explore nature paradise in the world, let’s find the best destination in world with us.
                 </p>
-                <a href="contact-us.php" class="Contact-button">Contact US</a> 
+                <a href="reviews.php" class="Contact-button">Contact US</a> 
             </div>
         </section>
  <!-- ------Recommended Destinations----- -->
@@ -125,7 +125,7 @@ $contacts = $contact->getMessages();
             ?>
                 <div class="discount">
                     <h2>Don’t Miss The 50% Discount travel today!</h2>
-                    <a class="register-button" href="accommodation.html">Destinations</a>
+                    <a class="register-button" href="accommodation.php">Destinations</a>
                 </div>
             <?php
                 }
