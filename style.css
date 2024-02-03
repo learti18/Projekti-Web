@@ -41,7 +41,7 @@ body {
 .text p {
   font-size: 1.5rem;
 }
-.img2{
+.img2 {
   width: 350px;
   height: 250px;
 }
@@ -416,7 +416,8 @@ h2 {
 
 .destination-section {
   display: flex;
-  padding: 100px 0;
+  padding-bottom: 40px;
+  padding-top: 80px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -428,6 +429,8 @@ h2 {
 .rec-active {
   border-radius: 10px;
   background-color: #fff !important;
+  color: var(--Blue-primary, #3e86f5) !important;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
 }
 .recommended-toggle {
   border: none;
@@ -496,7 +499,7 @@ h2 {
 
 /* ------Review Section-----  */
 .review-section {
-  padding: 100px 50px;
+  padding: 80px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;

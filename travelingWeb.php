@@ -1,3 +1,11 @@
+<?php  
+include "./classes/DatabaseConnection.php";
+include "./classes/reviews.class.php";
+
+$contact = new ContactUs();
+$contacts = $contact->getMessages();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +17,6 @@
 </head>
 <body>
     <header class="header">
-        
         <?php include("header.php") ?>
         <!-- ------text---------- -->
         <div class="text">
@@ -85,38 +92,19 @@
 <!-------Review section------>     
         <section class="review-section">
             <div class="review-cards">
-                <div class="review-card">
-                    <p>Our trip to Morocco was truly a once in a lifetime experience and 
-                        we are so grateful to everyone that made it happen seamlessly. 
-                        Our travel planner, Jaouad, was increadible.</p>
-                    <p class="author">-Vand D</p>
-                    <p class="happy">Happy Treloo</p>
-                    <!-- <div class="reviewer-image">
-                        <img class="reviewer-image-img" src="photos/reviewer1.svg" alt="reviewer pic">
-                        
-                        <div class="rating">
-                            <p><img src="photos/Star.svg" alt="star">4.5</p>
+                <?php foreach($contacts as $contact){ ?>
+                    <div class="review-card">
+                        <div class="message-details">
+                            <p><?php echo $contact["message"]; ?></p>
+                            <p class="author">-<?php echo $contact["fullname"]; ?></p>
+                            <p class="happy">Happy Treloo</p>
                         </div>
-                        
-                    </div> -->
-                </div>
-                <div class="review-card review-card2">
-                    <p>Our trip to Morocco was truly a once in a lifetime experience and 
-                        we are so grateful to everyone that made it happen seamlessly.
-                        Our travel planner, Jaouad, was increadible.</p>
-                    <p class="author">-Tru Vio</p>
-                    <p class="happy">Happy Treloo</p>
-                    <!-- <div class="reviewer-image">
-                        <img class="reviewer-image-img" src="photos/reviewer2.svg" alt="reviewer pic">
-                        <div class="rating">
-                            <p><img src="photos/Star.svg" alt="star">4.9</p>
-                        </div>
-                    </div>     -->
-                </div>
-            </div>
+                    </div>
+                <?php } ?>
+            </div>   
             <div class="arrow-slider">
-                <button class="slider-button"><img src="photos/left-arrow.png" alt=""></button>
-                <button class="slider-button"><img src="photos/right-arrow.png" alt=""></button>
+                <button class="slider-button" id="left-arrow">&lt;</button>
+                <button class="slider-button" id="right-arrow">&gt;</button>
             </div>
         </section>
 
