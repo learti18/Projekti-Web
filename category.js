@@ -70,7 +70,7 @@ function clearDestinations() {
 }
 
 function displayDestinationCard(destination) {
-    let imageUrl = destination.first_image_url !== '' ? destination.first_image_url : './photos/default_image.jpg';
+    let imageUrl = destination.first_image_url !== './photos/' ? destination.first_image_url : './photos/default_image.jpg';
     let city = destination.city;
     let price = destination.price;
     let startDate = new Date(destination.start_date);
@@ -176,7 +176,7 @@ function clearRecommendedDestinations() {
 }
 
 function displayRecommendedDestinationCard(destination) {
-    let imageUrl = destination.first_image_url !== '.' ?  destination.first_image_url : './photos/default_image.jpg';
+    let imageUrl = destination.first_image_url !== './photos/' ?  destination.first_image_url : './photos/default_image.jpg';
 
     let cardHtml = `
         <a class="card-destination" href="product.php?id=${destination.destination_id}">
