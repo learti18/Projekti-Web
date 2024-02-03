@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="description-2">
-                            <span><?php echo $description; ?></span>
+                            <p><?php echo $description; ?></p>
                         </div>
                         
                     </div>

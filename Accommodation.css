@@ -10,126 +10,12 @@ body {
 nav {
   background: linear-gradient(180deg, #3e86f5 0%, #6ea4ef 100%);
 }
-/* .Accommodation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-} */
-/* .budget-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 293px;
-  height: 300px;
-  border-radius: 6px;
-  background: var(--White-primary, #fff);
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
-}
-.Filter {
-  display: flex;
-  align-items: center;
-  color: var(--Black-primary, #000);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 0.36px;
-  height: 70px;
-}
-.Your-budget {
-  border-radius: 6px 6px 0px 0px;
-  display: flex;
-  width: 258px;
-  padding: 18px;
-  align-items: flex-start;
-  gap: 10px;
-  background: #f2f6ff;
-}
-.radio-section {
-  display: flex;
-  flex-direction: column;
-  color: var(--Black-75, rgba(0, 0, 0, 0.5));
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.28px;
-  width: 282px;
-  height: 240px;
-}
-.radio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 18px;
-  margin-left: 10px;
-}
-
-.ratings {
-  display: flex;
-  flex-direction: column;
-  width: 293px;
-  height: 170px;
-  border-radius: 6px;
-  background: var(--White-primary, #fff);
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
-  margin-top: 50px;
-}
-#rating {
-  border-radius: 6px 6px 0px 0px;
-  display: flex;
-  width: 280px;
-  height: 60px;
-  padding-left: 20px;
-  align-items: center;
-  gap: 10px;
-  background: #f2f6ff !important;
-  color: #000;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.16px;
-}
-.raiting-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-#A {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 46px;
-  border: 1px solid var(--Gray-5, #e0e0e0);
-  background: #fff;
-}
-#A button {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  border: none;
-  background-color: #fff;
-  color: var(--Black-75, rgba(0, 0, 0, 0.5));
-}
-.section span {
-  display: flex;
-  align-items: center;
-  padding-left: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: var(--Black-75, rgba(0, 0, 0, 0.5)); */
-/* } */
 .hotels {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-  width: 70%;
+  width: 65%;
   border-radius: 15px;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
   background: #fff;
@@ -142,53 +28,27 @@ nav {
   align-self: flex-start;
 }
 
-/* .description {
-  display: flex;
-  flex-direction: column;
-} */
 .img1 {
-  width: 50%;
+  width: 41%;
   border-radius: 10px;
   
 }
 .all {
   display: flex;
   margin-top: 30px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  /* margin-left: 20%;
-  margin-right: 20%; */
 }
 #tittle {
   display: flex;
   align-self: flex-end;
   color: var(--Black-primary, #000);
-  font-size: 22px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-}
-/* #receive-off {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 0.26px;
-  border-radius: 6px;
-  background: var(--Red, #eb5757);
-  width: 100%;
-  height: 40%;
-  padding: 16px 8px;
-} */
-.d {
-  /* color: #fff; */
 }
 .Review-section {
   display: flex;
@@ -207,12 +67,12 @@ nav {
 }
 .description-1 {
   color: var(--Black-75, rgba(0, 0, 0, 1));
-  font-size: 13px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
- 
+  
   letter-spacing: 0.26px;
-  padding-top: 20px;
+  padding-top: 10px;
   
 }
 .description-2 {
@@ -220,33 +80,33 @@ nav {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
- 
   letter-spacing: 0.26px;
-  width: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+
 }
 .booking {
   display: flex;
   flex-direction: row;
-
-  align-content: center;
-  padding-top: 10%;
+  padding-top: 5%;
+ 
 }
 .price {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   gap: 2em;
 }
 .book {
+  display: inline-block;
+  width: 67px;
+  height: 35px;
+  padding-left: 10px;
+  padding-top: 5px;
   text-decoration: none;
-  /* display: inline-flex; */
-  width: 100px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   background: var(--Blue-primary, #3e86f5);
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   font-size: 15px;
@@ -267,12 +127,10 @@ nav {
 @media only screen and (max-width: 670px) {
 
   .hotels {
-    display: flex;
     align-items: flex-start;
     flex-direction: column;
   }
   #tittle {
-    display: flex;
     flex-direction: row;
     font-size: 15px;
   }
@@ -280,15 +138,12 @@ nav {
     width: 100%;
   }
   .Review-section {
-    display: flex;
     flex-direction: row;
     align-items: center;
     font-size: 10px;
   }
   .description-2 {
     font-size: 11px;
-    /* width: 10px; */
-    line-height: 0.01px;
   }
   .description-1 {
     padding-top: 10px;
@@ -297,12 +152,10 @@ nav {
 
 @media only screen and (max-width: 920px) {
   .hotels {
-    display: flex;
     align-items: flex-start;
     flex-direction: column;
   }
   #tittle {
-    display: flex;
     flex-direction: row;
     font-size: 15px;
   }
@@ -315,14 +168,11 @@ nav {
   }
   .description-2 {
     font-size: 11px;
-    line-height: 0.01px;
   }
   .description-1 {
     padding-top: 10px;
   }
-  .all-description {
-    width: 100%;
-  }
+ 
 }
 @media only screen and (max-width: 548px) {
   .description-2 {
@@ -354,5 +204,8 @@ nav {
   }
   .book {
     width: 74px;
+  }
+  .description-2 {
+    display: none;
   }
 }

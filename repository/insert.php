@@ -19,7 +19,7 @@ ini_set('display_errors', 1);
                 $price= $_POST["price"];
                 $images=$_FILES["images"];
                 $destination_id = $city.rand(100,999);
-                $uploadDir = './photos/';
+                $uploadDir = '../uploads/';
                 $uploadedImageUrls = [];
 
         
@@ -59,6 +59,5 @@ ini_set('display_errors', 1);
                 exit;
 
     }   
-    
 }
 ?> 
